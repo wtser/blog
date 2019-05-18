@@ -10,7 +10,7 @@
         content="wtser"/>
 
   
-  <meta name="description" content="专心开发工作的时候，通知滴滴答答响个不停，影响效率和心情? 。 发现 Mac 提供了临时屏蔽通知的功能，就是勿扰模式。 不错，可以安心工作了。缺点就是容易忘记关闭勿扰，错过一些重要的通知。 可是每次手动开启关闭又显得"/>
+  <meta name="description" content="需求 私有云存储 家庭媒体中心 远程下载 现有条件 网络：百兆移动宽带 （上行 3MB/s 左右） 路由器： 极路由 4 千兆网口 主机：闲置笔记本一台 （Windows 10 ；12G 内存 ；CPU i5 6300hq 2.3ghz ） 实现使用的解决方案和工具 seafile 实现云存储"/>
   
 
   
@@ -19,11 +19,11 @@
   
 
   
-  <link rel="canonical" href="http://blog.wtser.com/posts/auto-dnt-for-mac-with-applescript/"/>
+  <link rel="canonical" href="http://blog.wtser.com/posts/%E5%88%A9%E7%94%A8%E9%97%B2%E7%BD%AE-pc-%E6%90%AD%E5%BB%BA-nas-%E5%AA%92%E4%BD%93%E4%B8%AD%E5%BF%83-%E8%BF%9C%E7%A8%8B%E4%B8%8B%E8%BD%BD/"/>
 
   
 
-  <title>Mac 勿扰模式周期性开关闭功能实现脚本 &middot; 王铁手的博客</title>
+  <title>利用闲置 PC 搭建 NAS 媒体中心 远程下载 &middot; 王铁手的博客</title>
 
   <link rel="shortcut icon" href="http://blog.wtser.com/images/favicon.ico"/>
   <link rel="stylesheet" href="http://blog.wtser.com/css/animate.min.css"/>
@@ -100,36 +100,94 @@
     <div class="post_page">
       <div class="post animated fadeInDown">
         <div class="post_title post_detail_title">
-          <h2><a href='/posts/auto-dnt-for-mac-with-applescript/'>Mac 勿扰模式周期性开关闭功能实现脚本</a></h2>
-          <span class="date">2017.10.30</span>
+          <h2><a href='/posts/%E5%88%A9%E7%94%A8%E9%97%B2%E7%BD%AE-pc-%E6%90%AD%E5%BB%BA-nas-%E5%AA%92%E4%BD%93%E4%B8%AD%E5%BF%83-%E8%BF%9C%E7%A8%8B%E4%B8%8B%E8%BD%BD/'>利用闲置 PC 搭建 NAS 媒体中心 远程下载</a></h2>
+          <span class="date">2017.12.03</span>
         </div>
-        <div class="post_content markdown"><p><img src="https://sfault-image.b0.upaiyun.com/992/660/992660630-59f6de4fba1ae" alt="" /></p>
+        <div class="post_content markdown">
 
-<p>专心开发工作的时候，通知滴滴答答响个不停，影响效率和心情? 。</p>
+<h2 id="需求">需求</h2>
 
-<p>发现 Mac 提供了临时屏蔽通知的功能，就是勿扰模式。</p>
+<ol>
+<li>私有云存储</li>
+<li>家庭媒体中心</li>
+<li>远程下载</li>
+</ol>
 
-<p>不错，可以安心工作了。缺点就是容易忘记关闭勿扰，错过一些重要的通知。
-可是每次手动开启关闭又显得麻烦。如果我正在使用番茄钟工作，想要 25 分钟勿扰 5 分钟尽管扰呢？</p>
+<h2 id="现有条件">现有条件</h2>
 
-<p>AppleScript！这货系统自带的，好用，几行脚本就轻松实现了。</p>
+<p>网络：百兆移动宽带 （上行 3MB/s 左右）</p>
 
-<p>前提：在系统快捷键中 将打开关闭勿扰模式的快捷键设置为 cmd+shift+option+control+d</p>
+<p>路由器： 极路由 4 千兆网口</p>
 
-<pre><code class="language-applescript">repeat while true
-	ignoring application responses
-		tell application &quot;System Events&quot; to keystroke &quot;D&quot; using {command down, shift down, option down, control down}
-	end ignoring
-	say &quot;DND opened&quot;
-	delay 1500
+<p>主机：闲置笔记本一台 （Windows 10 ；12G 内存 ；CPU i5 6300hq 2.3ghz ）</p>
 
-	ignoring application responses
-		tell application &quot;System Events&quot; to keystroke &quot;D&quot; using {command down, shift down, option down, control down}
-	end ignoring
-	say &quot;DND closed&quot;
-	delay 300
-end repeat
+<h2 id="实现使用的解决方案和工具">实现使用的解决方案和工具</h2>
+
+<p>seafile 实现云存储</p>
+
+<p>aria2 远程下载</p>
+
+<p>plex 媒体中心</p>
+
+<h2 id="远程访问">远程访问</h2>
+
+<p>反向代理 frp （移动宽带分配的是内网 IP）</p>
+
+<p>teamviewer （支持内网穿透）</p>
+
+<h2 id="windows-上的配置">Windows 上的配置</h2>
+
+<p>开机自启</p>
+
+<p>打开运行 输入下面的命令 会打开一个开机启动项的文件夹，把要开机启动的脚本放进去即可</p>
+
+<pre><code>shell:Common Startup
 </code></pre>
+
+<p>希望脚本运行后不退出窗口，需要在脚步文件内添加如下的内容</p>
+
+<pre><code>@echo off
+...
+cmd
+</code></pre>
+
+<p><img src="https://static.notion-static.com/d2ce2dd56df04271802bffb5e9af75da/Untitled" alt="" /></p>
+
+<h2 id="访问速度优化">访问速度优化</h2>
+
+<p>将家里的路由器 dns 中 将 以上几个服务的域名指向到内网的 ip，这样在家访问就走内网，访问速度大大提高。</p>
+
+<p>实现上面的功能需要主机上配置 Nginx 将内网的服务端口转发到 80 端口并且指定对应的域名。</p>
+
+<p><img src="https://static.notion-static.com/96cd9be9f85c47448275804a60d36dfe/Untitled" alt="" /></p>
+
+<h2 id="其他问题和建议">其他问题和建议</h2>
+
+<p>plex 编码占用大量 CPU</p>
+
+<p>plex 可以实现 gup 编码，来降低 cpu 占用，收费 $5/月</p>
+
+<p>aria2 百度云下载速度太慢</p>
+
+<p>aria2 原版最大线程限制为 16，而百度云单线程只有 100k 左右，可以使用一个不限制线程的版本来破解。</p>
+
+<p><a href="https://ci.appveyor.com/api/projects/myfreeer/a780c730b7282e090f238e8286f815f3/artifacts/aria2c_x86.7z">X86</a> <a href="https://ci.appveyor.com/api/projects/myfreeer/a780c730b7282e090f238e8286f815f3/artifacts/aria2c.7z">X64</a></p>
+
+<p>nextclould</p>
+
+<p>有 app 中心，但是很可惜被墙了</p>
+
+<h2 id="参考资料">参考资料</h2>
+
+<p><a href="https://github.com/fatedier/frp">https://github.com/fatedier/frp</a></p>
+
+<p><a href="https://www.plex.tv/">https://www.plex.tv</a></p>
+
+<p><a href="https://www.seafile.com/home/">https://www.seafile.com</a></p>
+
+<p><a href="https://github.com/aria2/aria2">https://github.com/aria2/aria2</a></p>
+
+<p><a href="https://github.com/redapple0204/my-boring-python/blob/master/破解百度云限速.md#方法六采用aria2不限制线程版本">https://github.com/redapple0204/my-boring-python/blob/master/破解百度云限速.md</a>&ldquo;</p>
 </div>
         <div class="post_footer">
           
@@ -138,11 +196,11 @@ end repeat
               <span class="field tags">
                 <i class="remixicon-stack-line"></i>
                 
-                <a href="http://blog.wtser.com/tags/applescript/">applescript</a>
+                <a href="http://blog.wtser.com/tags/nas/">nas</a>
                 
-                <a href="http://blog.wtser.com/tags/dnt/">DNT</a>
+                <a href="http://blog.wtser.com/tags/plex/">plex</a>
                 
-                <a href="http://blog.wtser.com/tags/project/">project</a>
+                <a href="http://blog.wtser.com/tags/aria2/">aria2</a>
                 
               </span>
             </div>

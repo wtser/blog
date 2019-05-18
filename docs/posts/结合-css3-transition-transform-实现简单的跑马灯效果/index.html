@@ -10,7 +10,7 @@
         content="wtser"/>
 
   
-  <meta name="description" content="Hugo 官方主页: https://gohugo.io/ Hugo的安装方式有两种，一种是直接下载编译好的Hugo二进制文件。如果只是使用Hugo推荐用这种方式。另一种方式是获取Hugo的源码，自己编译。由于各种不可预料的网络问题，第二种方式不"/>
+  <meta name="description" content="这是之前客户的一个需求，给的 demo 是用 gif 实现跑马灯，但是我们的没法用 gif，因为图上的文字需要翻译成各国语言，所以不能使用图片来实现，那么，自己写一个咯。 思考过程 html &amp;lt;div lantern&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;1&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;2&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;3&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;4&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/div&amp;gt; css * { margin: 0; padding: 0; } [lantern] { overflow:"/>
   
 
   
@@ -19,11 +19,11 @@
   
 
   
-  <link rel="canonical" href="http://blog.wtser.com/about/"/>
+  <link rel="canonical" href="http://blog.wtser.com/posts/%E7%BB%93%E5%90%88-css3-transition-transform-%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%9A%84%E8%B7%91%E9%A9%AC%E7%81%AF%E6%95%88%E6%9E%9C/"/>
 
   
 
-  <title>关于 &middot; 王铁手的博客</title>
+  <title>结合 CSS3 transition transform 实现简单的跑马灯效果 &middot; 王铁手的博客</title>
 
   <link rel="shortcut icon" href="http://blog.wtser.com/images/favicon.ico"/>
   <link rel="stylesheet" href="http://blog.wtser.com/css/animate.min.css"/>
@@ -100,16 +100,112 @@
     <div class="post_page">
       <div class="post animated fadeInDown">
         <div class="post_title post_detail_title">
-          <h2><a href='/about/'>关于</a></h2>
-          <span class="date">2018.12.29</span>
+          <h2><a href='/posts/%E7%BB%93%E5%90%88-css3-transition-transform-%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%9A%84%E8%B7%91%E9%A9%AC%E7%81%AF%E6%95%88%E6%9E%9C/'>结合 CSS3 transition transform 实现简单的跑马灯效果</a></h2>
+          <span class="date">2018.02.06</span>
         </div>
-        <div class="post_content markdown"><p>Hugo 官方主页: <a href="https://gohugo.io/">https://gohugo.io/</a></p>
+        <div class="post_content markdown">
 
-<p>Hugo的安装方式有两种，一种是直接下载编译好的Hugo二进制文件。如果只是使用Hugo推荐用这种方式。另一种方式是获取Hugo的源码，自己编译。由于各种不可预料的网络问题，第二种方式不是那么轻易能成功，虽然最后我还是折腾出来了。</p>
+<p>这是之前客户的一个需求，给的 demo 是用 gif 实现跑马灯，但是我们的没法用 gif，因为图上的文字需要翻译成各国语言，所以不能使用图片来实现，那么，自己写一个咯。</p>
 
-<p>Hugo二进制下载地址: <a href="https://github.com/gohugoio/hugo/releases">https://github.com/gohugoio/hugo/releases</a></p>
+<h2 id="思考过程">思考过程</h2>
+
+<p><img src="https://sfault-image.b0.upaiyun.com/229/355/2293555127-5a7d1130d6296" alt="思考过程" /></p>
+
+<h2 id="html">html</h2>
+
+<pre><code>&lt;div lantern&gt;
+  &lt;ul&gt;
+    &lt;li&gt;1&lt;/li&gt;
+    &lt;li&gt;2&lt;/li&gt;
+    &lt;li&gt;3&lt;/li&gt;
+    &lt;li&gt;4&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h2 id="css">css</h2>
+
+<pre><code class="language-css">* {
+  margin: 0;
+  padding: 0;
+}
+
+[lantern] {
+  overflow: hidden;
+}
+
+ul {
+  white-space: nowrap;
+  font-size: 0;
+  transform: translateX(0);
+  transition: transform 0s linear;
+}
+
+li {
+  width: 50vw;
+  border: 1px solid red;
+  display: inline-block;
+  height: 30px;
+  font-size: 16px;
+}
+</code></pre>
+
+<h2 id="js">js</h2>
+
+<pre><code class="language-js">function lantern($element, speed = 10) {
+  let liWidth = 0;
+  let $ul = $element.find(&quot;ul&quot;);
+
+  function run(init = false) {
+    let $li = $ul.find(&quot;li&quot;).first();
+    liWidth = $li.outerWidth();
+
+    if (!init) {
+      $ul.append($li[0].outerHTML);
+      $li.remove();
+    }
+
+    $ul[0].style.transitionDuration = &quot;0s&quot;;
+    $ul[0].style.transform = &quot;translateX(0)&quot;;
+
+    setTimeout(function() {
+      $ul[0].style.transitionDuration = speed + &quot;s&quot;;
+      $ul[0].style.transform = &quot;translateX(-&quot; + liWidth + &quot;px)&quot;;
+    }, 20);
+  }
+
+  run(true);
+  setTimeout(() =&gt; {
+    setInterval(run, speed * 1000);
+  }, 0);
+}
+
+lantern($(&quot;[lantern]&quot;), 20);
+</code></pre>
+
+<iframe height="265" style="width: 100%;" scrolling="no" title="结合 CSS3 transition transform 实现简单的跑马灯效果" src="//codepen.io/wtser/embed/GyNzBK/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/wtser/pen/GyNzBK/'>结合 CSS3 transition transform 实现简单的跑马灯效果</a> by 王铁手
+  (<a href='https://codepen.io/wtser'>@wtser</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 </div>
         <div class="post_footer">
+          
+          <div class="meta">
+            <div class="info">
+              <span class="field tags">
+                <i class="remixicon-stack-line"></i>
+                
+                <a href="http://blog.wtser.com/tags/css3/">css3</a>
+                
+                <a href="http://blog.wtser.com/tags/transition/">transition</a>
+                
+                <a href="http://blog.wtser.com/tags/transform/">transform</a>
+                
+                <a href="http://blog.wtser.com/tags/project/">project</a>
+                
+              </span>
+            </div>
+          </div>
           
         </div>
       </div>

@@ -6,10 +6,28 @@
     <description>Recent content in Posts on 王铁手的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 30 Oct 2017 10:33:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 06 Feb 2018 10:00:00 +0800</lastBuildDate>
     
 	<atom:link href="http://blog.wtser.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>结合 CSS3 transition transform 实现简单的跑马灯效果</title>
+      <link>http://blog.wtser.com/posts/%E7%BB%93%E5%90%88-css3-transition-transform-%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%9A%84%E8%B7%91%E9%A9%AC%E7%81%AF%E6%95%88%E6%9E%9C/</link>
+      <pubDate>Tue, 06 Feb 2018 10:00:00 +0800</pubDate>
+      
+      <guid>http://blog.wtser.com/posts/%E7%BB%93%E5%90%88-css3-transition-transform-%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%9A%84%E8%B7%91%E9%A9%AC%E7%81%AF%E6%95%88%E6%9E%9C/</guid>
+      <description>这是之前客户的一个需求，给的 demo 是用 gif 实现跑马灯，但是我们的没法用 gif，因为图上的文字需要翻译成各国语言，所以不能使用图片来实现，那么，自己写一个咯。 思考过程 html &amp;lt;div lantern&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;1&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;2&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;3&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;4&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/div&amp;gt; css * { margin: 0; padding: 0; } [lantern] { overflow:</description>
+    </item>
+    
+    <item>
+      <title>利用闲置 PC 搭建 NAS 媒体中心 远程下载</title>
+      <link>http://blog.wtser.com/posts/%E5%88%A9%E7%94%A8%E9%97%B2%E7%BD%AE-pc-%E6%90%AD%E5%BB%BA-nas-%E5%AA%92%E4%BD%93%E4%B8%AD%E5%BF%83-%E8%BF%9C%E7%A8%8B%E4%B8%8B%E8%BD%BD/</link>
+      <pubDate>Sun, 03 Dec 2017 10:00:00 +0800</pubDate>
+      
+      <guid>http://blog.wtser.com/posts/%E5%88%A9%E7%94%A8%E9%97%B2%E7%BD%AE-pc-%E6%90%AD%E5%BB%BA-nas-%E5%AA%92%E4%BD%93%E4%B8%AD%E5%BF%83-%E8%BF%9C%E7%A8%8B%E4%B8%8B%E8%BD%BD/</guid>
+      <description>需求 私有云存储 家庭媒体中心 远程下载 现有条件 网络：百兆移动宽带 （上行 3MB/s 左右） 路由器： 极路由 4 千兆网口 主机：闲置笔记本一台 （Windows 10 ；12G 内存 ；CPU i5 6300hq 2.3ghz ） 实现使用的解决方案和工具 seafile 实现云存储</description>
+    </item>
     
     <item>
       <title>Mac 勿扰模式周期性开关闭功能实现脚本</title>
@@ -17,7 +35,7 @@
       <pubDate>Mon, 30 Oct 2017 10:33:00 +0800</pubDate>
       
       <guid>http://blog.wtser.com/posts/auto-dnt-for-mac-with-applescript/</guid>
-      <description>专心开发工作的时候，通知滴滴答答响个不停，影响效率和心情? 。 发现 Mac 提供了临时屏蔽通知的功能，就是 勿扰模式。 不错，可以安心工作了。缺点就是容易忘记关闭勿扰，错过一些重要的通知。 可是每次手动开启关闭又显得</description>
+      <description>专心开发工作的时候，通知滴滴答答响个不停，影响效率和心情? 。 发现 Mac 提供了临时屏蔽通知的功能，就是勿扰模式。 不错，可以安心工作了。缺点就是容易忘记关闭勿扰，错过一些重要的通知。 可是每次手动开启关闭又显得</description>
     </item>
     
   </channel>
