@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DNT on 王铁手的博客</title>
+    <link>http://blog.wtser.com/tags/dnt/</link>
+    <description>Recent content in DNT on 王铁手的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 30 Oct 2017 10:33:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://blog.wtser.com/tags/dnt/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mac 勿扰模式周期性开关闭功能实现脚本</title>
+      <link>http://blog.wtser.com/posts/auto-dnt-for-mac-with-applescript/</link>
+      <pubDate>Mon, 30 Oct 2017 10:33:00 +0800</pubDate>
+      
+      <guid>http://blog.wtser.com/posts/auto-dnt-for-mac-with-applescript/</guid>
+      <description>专心开发工作的时候，通知滴滴答答响个不停，影响效率和心情? 。 发现 Mac 提供了临时屏蔽通知的功能，就是 勿扰模式。 不错，可以安心工作了。缺点就是容易忘记关闭勿扰，错过一些重要的通知。 可是每次手动开启关闭又显得</description>
+    </item>
+    
+  </channel>
+</rss>
