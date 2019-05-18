@@ -1,0 +1,51 @@
+baseURL = "https://wtser.com/"
+languageCode = "zh-cn"
+title = "王铁手的博客"
+theme = "zozo"
+hasCJKLanguage = true 
+summaryLength = 100
+paginate = 4                         # shows the number of articles  # 首页显示文章数量
+enableEmoji = true
+googleAnalytics = ""                 # your google analytics id
+disqusShortname = ""                 # your discuss shortname
+
+[author]                             # essential                     # 必需
+  name = "wtser"
+
+[params]
+  subTitle = "Find a faster way to fail, recover and try again."                                       # site's subTitle  # 网站二级标题
+#  footerSlogan = "我的精神家园"                                          # site's footer slogan  # 网站页脚标语
+  keywords = ["frontend", "tech","wtser"]                                  # site's keywords  # 网站关键字
+#  description = "Hugo theme zozo example site."   
+
+
+[[menu.main]]                        # config your menu  # 配置菜单
+  name = "首页"
+  weight = 10
+  identifier = "home"
+  url = "/"
+[[menu.main]]
+  name = "归档"
+  weight = 20
+  identifier = "archive"
+  url = "/posts/"
+[[menu.main]]
+  name = "标签"
+  weight = 30
+  identifier = "tags"
+  url = "/tags/"
+[[menu.main]]
+  name = "关于"
+  weight = 40
+  identifier = "about"
+  url = "/about/"
+
+# mathjax
+  enableMathJax = true                                                 # enable mathjax  # 是否使用mathjax（数学公式）
+
+  enableSummary = true   
+
+[social]
+  github = "https://github.com/wtser"
+  twitter = "https://twitter.com/wtser"
+#  instagram = " "
