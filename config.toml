@@ -17,7 +17,11 @@ disqusShortname = ""                 # your discuss shortname
 #  footerSlogan = "我的精神家园"                                          # site's footer slogan  # 网站页脚标语
   keywords = ["frontend", "tech","wtser"]                                  # site's keywords  # 网站关键字
 #  description = "Hugo theme zozo example site."   
+# mathjax
+  enableMathJax = true                                                 # enable mathjax  # 是否使用mathjax（数学公式）
 
+  enableSummary = true                                                 # display the article summary  # 是否显示文章摘要
+ 
 
 [[menu.main]]                        # config your menu  # 配置菜单
   name = "首页"
@@ -25,25 +29,26 @@ disqusShortname = ""                 # your discuss shortname
   identifier = "home"
   url = "/"
 [[menu.main]]
-  name = "归档"
+  name = "作品"
   weight = 20
+  identifier = "project"
+  url = "/tags/project"
+[[menu.main]]
+  name = "归档"
+  weight = 30
   identifier = "archive"
   url = "/posts/"
 [[menu.main]]
   name = "标签"
-  weight = 30
+  weight = 40
   identifier = "tags"
   url = "/tags/"
 [[menu.main]]
   name = "关于"
-  weight = 40
+  weight = 50
   identifier = "about"
   url = "/about/"
 
-# mathjax
-  enableMathJax = true                                                 # enable mathjax  # 是否使用mathjax（数学公式）
-
-  enableSummary = true   
 
 [social]
   github = "https://github.com/wtser"
