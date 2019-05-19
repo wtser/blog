@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-cn" >
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  
+  <meta name="author"
+        content="wtser"/>
+
+  
+  <meta name="description" content="B70 ，MT7621 准备工作 下载固件包 链接：https://eyun.baidu.com/s/3i5IBidR 密码：68bp 开启极路由的开发者模式（也就是 root） FBI Warning 固件保留了极 4 的分区信息, 不破坏原机"/>
+  
+
+  
+  
+  <meta name="keywords" content="frontend, tech, wtser"/>
+  
+
+  
+  <link rel="canonical" href="//wtser.com/posts/%E6%9E%81%E8%B7%AF%E7%94%B14-%E5%88%B7%E6%BD%98%E5%A4%9A%E6%8B%89%E5%9B%BA%E4%BB%B6/"/>
+
+  
+
+  <title>极路由4 刷潘多拉固件 &middot; 王铁手的博客</title>
+
+  <link rel="shortcut icon" href="//wtser.com/images/favicon.ico"/>
+  <link rel="stylesheet" href="//wtser.com/css/animate.min.css"/>
+  <link rel="stylesheet" href="//wtser.com/css/remixicon.css"/>
+  <link rel="stylesheet" href="//wtser.com/css/zozo.css"/>
+  <link rel="stylesheet" href="//wtser.com/css/highlight.css"/>
+
+  
+  
+</head>
+
+<body>
+<div class="main animated">
+  <div class="nav_container animated fadeInDown">
+  <div class="site_nav" id="site_nav">
+    <ul>
+      
+      <li>
+        <a href="/">首页</a>
+      </li>
+      
+      <li>
+        <a href="/tags/project">作品</a>
+      </li>
+      
+      <li>
+        <a href="/posts/">归档</a>
+      </li>
+      
+      <li>
+        <a href="/tags/">标签</a>
+      </li>
+      
+      <li>
+        <a href="/about/">关于</a>
+      </li>
+      
+    </ul>
+  </div>
+  <div class="menu_icon">
+    <a id="menu_icon"><i class="remixicon-links-line"></i></a>
+  </div>
+</div>
+
+  <div class="header animated fadeInDown">
+  <div class="site_title_container">
+    <div class="site_title">
+      <h1>
+        <a href="//wtser.com/">
+          <span>王铁手的博客</span>
+          <img src="//wtser.com/images/logo.svg"/>
+        </a>
+      </h1>
+    </div>
+    <div class="description">
+      <p class="sub_title">Find a faster way to fail, recover and try again.</p>
+      <div class="my_socials">
+        
+        
+        <a href="https://github.com/wtser" title="github" target="_blank"><i class="remixicon-github-fill"></i></a>
+        
+        
+        
+        <a href="https://twitter.com/wtser" title="twitter" target="_blank"><i class="remixicon-twitter-fill"></i></a>
+        
+        
+        <a href="//wtser.com/index.xml" type="application/rss+xml" title="rss" target="_blank"><i class="remixicon-rss-fill"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="content">
+    <div class="post_page">
+      <div class="post animated fadeInDown">
+        <div class="post_title post_detail_title">
+          <h2><a href='/posts/%E6%9E%81%E8%B7%AF%E7%94%B14-%E5%88%B7%E6%BD%98%E5%A4%9A%E6%8B%89%E5%9B%BA%E4%BB%B6/'>极路由4 刷潘多拉固件</a></h2>
+          <span class="date">2017.11.19</span>
+        </div>
+        <div class="post_content markdown">
+
+<p>B70 ，MT7621</p>
+
+<h2 id="准备工作">准备工作</h2>
+
+<ol>
+<li>下载固件包</li>
+</ol>
+
+<p>链接：<a href="https://eyun.baidu.com/s/3i5IBidR">https://eyun.baidu.com/s/3i5IBidR</a> 密码：68bp</p>
+
+<ol>
+<li>开启极路由的开发者模式（也就是 root）</li>
+</ol>
+
+<h2 id="fbi-warning">FBI Warning</h2>
+
+<ol>
+<li>固件保留了极 4 的分区信息, 不破坏原机信，建议刷机前备份 firmware 分区，这样可以在 pb-boot 下面恢复原厂固件。</li>
+<li>开通开发者模式会失去官方保修，且不可恢复.</li>
+</ol>
+
+<h2 id="刷入步骤">刷入步骤</h2>
+
+<ol>
+<li>备份官方固件</li>
+</ol>
+
+<p>dd if=/dev/mtd9 of=/tmp/firmware_backup.bin</p>
+
+<ol>
+<li>写入潘多拉</li>
+</ol>
+
+<p>将固件和 pb-boot 上传到路由/tmp 目录下，使用如下命令刷入</p>
+
+<pre><code>  mtd write /tmp/PandoraBox-ralink-mt7621-hc5962-2017-03-17-git-3840fad-squashfs-sysupgrade.bin firmware
+
+  mtd erase firmware_backup
+</code></pre>
+
+<p>ps：如果不擦 backup,重启后会恢复回去</p>
+
+<ol>
+<li>刷 pb-boot （万一挂了可以用它刷回官方固件）</li>
+</ol>
+
+<p>mtd write /tmp/pb-boot-hc5962.bin u-boot</p>
+
+<h2 id="其他">其他</h2>
+
+<ol>
+<li>SS</li>
+</ol>
+
+<p>我试着安装了 ss，好像存在一些问题，甚至导致了网络循环断开又链接，重启路由才恢复。</p>
+
+<ol>
+<li>LEDE</li>
+</ol>
+
+<p>现在也能刷 LEDE 了。</p>
+
+<h2 id="参考资料">参考资料</h2>
+
+<p><a href="http://www.right.com.cn/FORUM/thread-209767-1-1.html">http://www.right.com.cn/FORUM/thread-209767-1-1.html</a></p>
+
+<p><a href="https://downloads.lede-project.org/snapshots/targets/ramips/mt7621/">https://downloads.lede-project.org/snapshots/targets/ramips/mt7621/</a></p>
+
+<p><a href="https://github.com/lede-project/source/pull/865">https://github.com/lede-project/source/pull/865</a></p>
+
+<p><img src="https://static.notion-static.com/77cb5ccaf034435cbc6a967b0e4709e0/Untitled" alt="" /></p>
+</div>
+        <div class="post_footer">
+          
+          <div class="meta">
+            <div class="info">
+              <span class="field tags">
+                <i class="remixicon-stack-line"></i>
+                
+                <a href="//wtser.com/tags/hiwifi/">hiwifi</a>
+                
+              </span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <a id="back_to_top" href="#" class="back_to_top"><span>△</span></a>
+</div>
+<div class="disqus">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "wtser" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+<footer class="footer">
+  <div class="powered_by">
+    <a href="https://zeuk.me">Designed by Zeuk,</a>
+    <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+  </div>
+
+  <div class="footer_slogan">
+    <span></span>
+  </div>
+</footer>
+
+
+
+<script src="//wtser.com/js/jquery-3.3.1.min.js"></script>
+<script src="//wtser.com/js/zozo.js"></script>
+<script src="//wtser.com/js/highlight.pack.js"></script>
+<link  href="//wtser.com/css/fancybox.min.css" rel="stylesheet">
+<script src="//wtser.com/js/fancybox.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad()</script>
+
+
+  <script type="text/javascript" async src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+
+
+
+
+</body>
+</html>

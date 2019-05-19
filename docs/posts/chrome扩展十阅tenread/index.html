@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-cn" >
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  
+  <meta name="author"
+        content="wtser"/>
+
+  
+  <meta name="description" content="为何要做这个东西 满足自身需求 之前一直有订阅 rss 的习惯，有博客也有各种聚合站。 博客类的站点更新频率不是特别频繁，但是几个聚合站点，例如 hacker news 等，每日更新内容特别多，每天都看不完。日积月累，一个月下来就要奔溃"/>
+  
+
+  
+  
+  <meta name="keywords" content="frontend, tech, wtser"/>
+  
+
+  
+  <link rel="canonical" href="//wtser.com/posts/chrome%E6%89%A9%E5%B1%95%E5%8D%81%E9%98%85tenread/"/>
+
+  
+
+  <title>chrome 扩展 十阅 （TenRead） &middot; 王铁手的博客</title>
+
+  <link rel="shortcut icon" href="//wtser.com/images/favicon.ico"/>
+  <link rel="stylesheet" href="//wtser.com/css/animate.min.css"/>
+  <link rel="stylesheet" href="//wtser.com/css/remixicon.css"/>
+  <link rel="stylesheet" href="//wtser.com/css/zozo.css"/>
+  <link rel="stylesheet" href="//wtser.com/css/highlight.css"/>
+
+  
+  
+</head>
+
+<body>
+<div class="main animated">
+  <div class="nav_container animated fadeInDown">
+  <div class="site_nav" id="site_nav">
+    <ul>
+      
+      <li>
+        <a href="/">首页</a>
+      </li>
+      
+      <li>
+        <a href="/tags/project">作品</a>
+      </li>
+      
+      <li>
+        <a href="/posts/">归档</a>
+      </li>
+      
+      <li>
+        <a href="/tags/">标签</a>
+      </li>
+      
+      <li>
+        <a href="/about/">关于</a>
+      </li>
+      
+    </ul>
+  </div>
+  <div class="menu_icon">
+    <a id="menu_icon"><i class="remixicon-links-line"></i></a>
+  </div>
+</div>
+
+  <div class="header animated fadeInDown">
+  <div class="site_title_container">
+    <div class="site_title">
+      <h1>
+        <a href="//wtser.com/">
+          <span>王铁手的博客</span>
+          <img src="//wtser.com/images/logo.svg"/>
+        </a>
+      </h1>
+    </div>
+    <div class="description">
+      <p class="sub_title">Find a faster way to fail, recover and try again.</p>
+      <div class="my_socials">
+        
+        
+        <a href="https://github.com/wtser" title="github" target="_blank"><i class="remixicon-github-fill"></i></a>
+        
+        
+        
+        <a href="https://twitter.com/wtser" title="twitter" target="_blank"><i class="remixicon-twitter-fill"></i></a>
+        
+        
+        <a href="//wtser.com/index.xml" type="application/rss+xml" title="rss" target="_blank"><i class="remixicon-rss-fill"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="content">
+    <div class="post_page">
+      <div class="post animated fadeInDown">
+        <div class="post_title post_detail_title">
+          <h2><a href='/posts/chrome%E6%89%A9%E5%B1%95%E5%8D%81%E9%98%85tenread/'>chrome 扩展 十阅 （TenRead）</a></h2>
+          <span class="date">2015.04.20</span>
+        </div>
+        <div class="post_content markdown">
+
+<h2 id="为何要做这个东西">为何要做这个东西</h2>
+
+<h3 id="满足自身需求">满足自身需求</h3>
+
+<p>之前一直有订阅 rss 的习惯，有博客也有各种聚合站。</p>
+
+<p>博客类的站点更新频率不是特别频繁，但是几个聚合站点，例如 hacker news 等，每日更新内容特别多，每天都看不完。日积月累，一个月下来就要奔溃了，而且很多内容是及时性比较强，到月底再去看已经过时了。</p>
+
+<p>之前发现了一个软件叫 一览，能浏览几个热门网站的精华文章，随时想看就能看到最新的热门文章。于是我把 rss 里面的部分订阅取消，然后用 一览 来解决。</p>
+
+<p>用了一段时间发现，一览体验虽好，但是提供的网站就那么几个，而且不支持添加自定义站点，造成了很大的限制。</p>
+
+<p>为了满足自己的这个需求，我决定开发类似功能的 chrome 扩展程序，十阅 因此诞生了。</p>
+
+<h3 id="锻炼开发技能">锻炼开发技能</h3>
+
+<p>最早还不会 angular，使用的是 backbone jQuery 开发，开发这个扩展用了 2 天时间，实现了阅读新闻和管理阅读源的功能，就上谷歌商店上了第一版本。</p>
+
+<p>第二版在第一版的基础上，增加了订阅商店的功能。降低添加阅读站点的难度。</p>
+
+<p>目前的第三部，使用了 angular 进行了重构，对界面和交互也进行了微调。使用 gulp 功能把前端构建环境也搞起来，使用 bower 管理第三方依赖。还使用了 sass。接下来可能还会搞搞 coffee script。</p>
+
+<h3 id="贡献社会-开源">贡献社会（开源）</h3>
+
+<p>这个项目托管于 <a href="https://github.com/wtser/simpleNews--ext">github</a> 和 <a href="https://coding.net/u/wtser/p/ten-read">coding.net</a></p>
+
+<p>核心代码其实很简单，有兴趣的朋友可以 fork 一份，有问题也可以发个 issue 给我。</p>
+
+<h2 id="有了-rss-为何还需要它">有了 RSS 为何还需要它</h2>
+
+<p>这个扩展解决了以下几个问题</p>
+
+<h3 id="解决信息过载">解决信息过载</h3>
+
+<p>让你从信息爆炸的灾难中解脱出来。</p>
+
+<h3 id="实时获取热门文章">实时获取热门文章</h3>
+
+<p>只关注热点文章，提高阅读效率</p>
+
+<h3 id="利用碎片化时间">利用碎片化时间</h3>
+
+<h2 id="愿景">愿景</h2>
+
+<ul>
+<li>让更多的人受益于此项目</li>
+<li>希望更多人加入开源行列</li>
+</ul>
+
+<h2 id="功能实现使用的技术与工具">功能实现使用的技术与工具</h2>
+
+<ul>
+<li>angular</li>
+<li>zepto</li>
+<li>sass</li>
+<li>gulp</li>
+</ul>
+
+<h2 id="功能介绍">功能介绍</h2>
+
+<p>扩展默认预置了一些网站。你可以在配置页面进行 增删改。</p>
+
+<p>扩展配置页面提供了订阅商店的功能，目前已经添加了若干站点，不断完善中。</p>
+
+<h2 id="资源链接">资源链接</h2>
+
+<p><a href="https://chrome.google.com/webstore/detail/%E5%8D%81%E9%98%85/bpnpkcfhagdgccpikdkldbnngifepibc">下载 chrome 扩展</a></p>
+
+<h2 id="界面预览图">界面预览图</h2>
+
+<p><img src="https://sfault-image.b0.upaiyun.com/312/917/3129176156-5535160977568_articlex" alt="popup" /></p>
+
+<p><img src="https://sfault-image.b0.upaiyun.com/102/079/1020794188-553515ffddfc7_articlex" alt="配置页面" /></p>
+
+<p><img src="https://sfault-image.b0.upaiyun.com/106/578/1065781510-553515ec64def_articlex" alt="配置页面" /></p>
+</div>
+        <div class="post_footer">
+          
+          <div class="meta">
+            <div class="info">
+              <span class="field tags">
+                <i class="remixicon-stack-line"></i>
+                
+                <a href="//wtser.com/tags/chrome-extension/">chrome extension</a>
+                
+                <a href="//wtser.com/tags/rss/">rss</a>
+                
+                <a href="//wtser.com/tags/project/">project</a>
+                
+              </span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <a id="back_to_top" href="#" class="back_to_top"><span>△</span></a>
+</div>
+<div class="disqus">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "wtser" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+<footer class="footer">
+  <div class="powered_by">
+    <a href="https://zeuk.me">Designed by Zeuk,</a>
+    <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+  </div>
+
+  <div class="footer_slogan">
+    <span></span>
+  </div>
+</footer>
+
+
+
+<script src="//wtser.com/js/jquery-3.3.1.min.js"></script>
+<script src="//wtser.com/js/zozo.js"></script>
+<script src="//wtser.com/js/highlight.pack.js"></script>
+<link  href="//wtser.com/css/fancybox.min.css" rel="stylesheet">
+<script src="//wtser.com/js/fancybox.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad()</script>
+
+
+  <script type="text/javascript" async src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+
+
+
+
+</body>
+</html>

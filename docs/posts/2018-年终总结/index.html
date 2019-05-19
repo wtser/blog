@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh-cn" >
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  
+  <meta name="author"
+        content="wtser"/>
+
+  
+  <meta name="description" content="职业篇 博客 之前博客系统一直用的 Ghost，然而 Ghost 的新版在 vps 上升级迁移遇到很多问题，后来索性自己用 nodejs 写了一个，基于 nextjs。 翻译文章 花了一周的闲余时间，翻译了 maintainable css，访问地址 http://maintainablecss.wtser.com/ 真的是好久没翻译文章"/>
+  
+
+  
+  
+  <meta name="keywords" content="frontend, tech, wtser"/>
+  
+
+  
+  <link rel="canonical" href="//wtser.com/posts/2018-%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
+
+  
+
+  <title>2018 年终总结 &middot; 王铁手的博客</title>
+
+  <link rel="shortcut icon" href="//wtser.com/images/favicon.ico"/>
+  <link rel="stylesheet" href="//wtser.com/css/animate.min.css"/>
+  <link rel="stylesheet" href="//wtser.com/css/remixicon.css"/>
+  <link rel="stylesheet" href="//wtser.com/css/zozo.css"/>
+  <link rel="stylesheet" href="//wtser.com/css/highlight.css"/>
+
+  
+  
+</head>
+
+<body>
+<div class="main animated">
+  <div class="nav_container animated fadeInDown">
+  <div class="site_nav" id="site_nav">
+    <ul>
+      
+      <li>
+        <a href="/">首页</a>
+      </li>
+      
+      <li>
+        <a href="/tags/project">作品</a>
+      </li>
+      
+      <li>
+        <a href="/posts/">归档</a>
+      </li>
+      
+      <li>
+        <a href="/tags/">标签</a>
+      </li>
+      
+      <li>
+        <a href="/about/">关于</a>
+      </li>
+      
+    </ul>
+  </div>
+  <div class="menu_icon">
+    <a id="menu_icon"><i class="remixicon-links-line"></i></a>
+  </div>
+</div>
+
+  <div class="header animated fadeInDown">
+  <div class="site_title_container">
+    <div class="site_title">
+      <h1>
+        <a href="//wtser.com/">
+          <span>王铁手的博客</span>
+          <img src="//wtser.com/images/logo.svg"/>
+        </a>
+      </h1>
+    </div>
+    <div class="description">
+      <p class="sub_title">Find a faster way to fail, recover and try again.</p>
+      <div class="my_socials">
+        
+        
+        <a href="https://github.com/wtser" title="github" target="_blank"><i class="remixicon-github-fill"></i></a>
+        
+        
+        
+        <a href="https://twitter.com/wtser" title="twitter" target="_blank"><i class="remixicon-twitter-fill"></i></a>
+        
+        
+        <a href="//wtser.com/index.xml" type="application/rss+xml" title="rss" target="_blank"><i class="remixicon-rss-fill"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="content">
+    <div class="post_page">
+      <div class="post animated fadeInDown">
+        <div class="post_title post_detail_title">
+          <h2><a href='/posts/2018-%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/'>2018 年终总结</a></h2>
+          <span class="date">2019.02.23</span>
+        </div>
+        <div class="post_content markdown">
+
+<h2 id="职业篇">职业篇</h2>
+
+<h3 id="博客">博客</h3>
+
+<p>之前博客系统一直用的 Ghost，然而 Ghost 的新版在 vps 上升级迁移遇到很多问题，后来索性自己用 nodejs 写了一个，基于 nextjs。</p>
+
+<h3 id="翻译文章">翻译文章</h3>
+
+<p>花了一周的闲余时间，翻译了 maintainable css，访问地址 <a href="http://maintainablecss.wtser.com/">http://maintainablecss.wtser.com/</a></p>
+
+<p>真的是好久没翻译文章了。</p>
+
+<h3 id="生产力">生产力</h3>
+
+<ul>
+<li>在项目中使用了 stylelint ，peritter 等工具，统一代码风格，提高代码质量。</li>
+<li>iterm2 插件</li>
+</ul>
+
+<p><a href="https://xiaozhou.net/learn-the-command-line-iterm-and-zsh-2017-06-23.html">https://xiaozhou.net/learn-the-command-line-iterm-and-zsh-2017-06-23.html</a></p>
+
+<p>alias</p>
+
+<p>alias gs=&ldquo;git status&rdquo;</p>
+
+<p>alias gitclean=&ldquo;git branch -vv | grep &lsquo; gone]&rsquo; | awk &lsquo;{print \$1}&rsquo; | xargs git branch -d&rdquo;</p>
+
+<p>快速跳转</p>
+
+<p>使用 d 这个命令，列出最近访问过的各个目录</p>
+
+<p>目录名简写与补全</p>
+
+<p>比如我们要进入到 ~/workspace/src/dict，我们只需要输入每个目录的首字母就行，然后再 TAB 键补全</p>
+
+<p>重复上一条命令</p>
+
+<p>输入 r ，可以很便捷的重复执行上一条命令。</p>
+
+<p>zsh-autosuggestions</p>
+
+<p><a href="https://github.com/zsh-users/zsh-syntax-highlighting">https://github.com/zsh-users/zsh-syntax-highlighting</a></p>
+
+<p><a href="https://github.com/zsh-users/zsh-autosuggestions">https://github.com/zsh-users/zsh-autosuggestions</a></p>
+
+<ul>
+<li>了解了一些 tmux 相关的知识点，但是缺少实践。</li>
+</ul>
+
+<p><a href="http://harttle.com/2015/11/06/tmux-startup.html">http://harttle.com/2015/11/06/tmux-startup.html</a>
+  <a href="http://kumu-linux.github.io/blog/2013/08/06/tmux/">http://kumu-linux.github.io/blog/2013/08/06/tmux/</a>
+  <a href="http://cenalulu.github.io/linux/tmux/">http://cenalulu.github.io/linux/tmux/</a>
+  <a href="http://wdxtub.com/2016/03/30/tmux-guide/">http://wdxtub.com/2016/03/30/tmux-guide/</a></p>
+
+<p><a href="http://louiszhai.github.io/2017/09/30/tmux/?hmsr=toutiao.io&amp;utm_medium=toutiao.io&amp;utm_source=toutiao.io">Tmux 使用手册</a></p>
+
+<h3 id="研究与学习">研究与学习</h3>
+
+<p>算法学习</p>
+
+<p><a href="http://wuchong.me/blog/2014/02/09/algorithm-sort-summary/">经典排序算法总结与实现</a></p>
+
+<p><a href="https://www.jianshu.com/p/1b4068ccd505">JS 家的排序算法</a></p>
+
+<h3 id="业务相关">业务相关</h3>
+
+<ul>
+<li>给自己取了一个英文名 English name Finn</li>
+<li>参与公司的一个 SPA 项目，react，学习了 redux state 相关的知识。</li>
+
+<li><p>SVG <code>use</code> with External Source</p>
+
+<pre><code>&lt;svg viewBox=&quot;0 0 100 100&quot;&gt; &lt;use xlink:href=&quot;defs.svg#icon-1&quot;&gt;&lt;/use&gt;
+&lt;/svg&gt;
+</code></pre></li>
+</ul>
+
+<p><a href="https://css-tricks.com/svg-use-external-source/">https://css-tricks.com/svg-use-external-source/</a></p>
+
+<p>But, the external resource way doesn&rsquo;t work in any version (up to 11 tested) of Internet Explorer. Even the ones that do support inline SVG: 9, 10, 11.</p>
+
+<p><a href="https://github.com/jonathantneal/svg4everybody">https://github.com/jonathantneal/svg4everybody</a></p>
+
+<p>It works like this:</p>
+
+<ol>
+<li>If the browser is IE 9, 10, or 11 (User Agent sniff, but that&rsquo;s the whole point here).</li>
+<li>Ajax for the SVG file referenced</li>
+<li>Find the needed bit, based on the ID referenced (e.g. #icon-1)</li>
+<li>Inject that into the <code>&lt;svg&gt;</code> on the page</li>
+</ol>
+
+<ul>
+<li><a href="https://segmentfault.com/a/1190000013160055">简单的跑马灯</a></li>
+<li>使用 picture 元素实现 图片的 response</li>
+</ul>
+
+<p>srcset only use for mobile img</p>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture</a></p>
+
+<pre><code>    &lt;picture&gt;
+     &lt;source srcset=&quot;mdn-logo-wide.png&quot; media=&quot;(min-width: 600px)&quot;&gt;
+     &lt;img src=&quot;mdn-logo-narrow.png&quot; alt=&quot;MDN&quot;&gt;
+    &lt;/picture&gt;
+</code></pre>
+
+<ul>
+<li>overscroll-behavior 解决 modal 滚动带动底下页面滚动问题</li>
+</ul>
+
+<p>比较拙的解决方案就是给<code>body</code>添加<code>overflow:hidden</code>，但这有可能会影响我们的操作，甚至影响你浏览你的页面。</p>
+
+<p>CSS 的<code>overscroll-behavior</code>，这个属性有三个可取值：</p>
+
+<ul>
+<li><code>auto</code>：其默认值。元素（容器）的滚动会传播给其祖先元素。有点类似 JavaScript 中的冒泡行为一样</li>
+<li><code>contain</code>：阻止滚动链接。滚动行为不会传播给其祖先元素，但会影响节点内的局部显示。例如，Android 上的光辉效果或 iOS 上的回弹效果。当用户触摸滚动边界时会通知用户。注意，<code>overscroll-behavior:contain</code>在<code>html</code>元素上使用，可以阻止导航滚动操作</li>
+<li><code>none</code>：和<code>contain</code>一样，但它也可以防止节点本身的滚动效果</li>
+</ul>
+
+<blockquote>
+<p>overscroll-behavior 属性是 overscroll-behavior-x 和 overscroll-behavior-y 的简写，如果你只想控制其中一个方向的滚动行为，可以使用其中的某一个属性。</p>
+</blockquote>
+
+<ul>
+<li>编写自定义视频播放器</li>
+</ul>
+
+<p><a href="https://www.w3.org/2010/05/video/mediaevents.html">https://www.w3.org/2010/05/video/mediaevents.html</a></p>
+
+<p><strong>fullscreen api</strong></p>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API</a></p>
+
+<p><a href="https://github.com/sindresorhus/screenfull.js">https://github.com/sindresorhus/screenfull.js</a></p>
+
+<p><strong>bug in safari</strong></p>
+
+<pre><code>    element:fullscreen{
+    }
+</code></pre>
+
+<p>针对被全屏的元素 (如果 element 是 iframe，:-webkit-full-screen-ancestor:not(iframe) {} 在 safari 不生效)</p>
+
+<p>safari</p>
+
+<p>iframe webkitIsFullScreen aways return false</p>
+
+<p>event webkitfullscreenchange e.target return <code>document</code> when exit fullscreen</p>
+
+<ul>
+<li>一点开发的体验感受和想法
+
+<ul>
+<li>需求 基本来自客户 （需求评审）</li>
+<li>功能点评审估时</li>
+<li>后端的功能需求基本是清楚的</li>
+<li>前端还存在很多需要细化的地方【例如响应式】）（前端评审 2+个前端）</li>
+<li>尽量避免前后端在同一分支开发</li>
+<li>建立分支用 feature-frontend</li>
+<li>避免了冲突 总是需要 git pull —rebase 问题 （就我一个人开发 还时不时被 push reject）</li>
+<li>（不理解分支都懒得建的想法）</li>
+<li>功能还未完善就去测试了</li>
+<li>（信息不对称） 测试不知道这个功能是否已达到测试标准？PM？</li>
+<li>（信息不充分）有些功能或样式是产品那边未定义，技术未做实现或者做了简单的处理，QA 主观感觉是 bug，直接 assign 给开发。
+
+<ul>
+<li>没有定义，界面没有混乱，无法明确界定是 bug 的，仅仅是主观感受不爽，应该先 assign PM</li>
+<li>pm 应该在 QA 测试之前进行 review</li>
+<li>若依然遇到被 assign 此类问题直接 assign PM</li>
+</ul></li>
+<li>issue 修复后，再次测试 速度不够理想，基本来回个 2-3 天 （能否做到在第一 1 天修复 issue，第二天 review 完）</li>
+<li>多个项目的时间管理安排</li>
+<li>尽量避免多个项目穿插进行</li>
+<li>人员调配</li>
+</ul></li>
+</ul>
+</div>
+        <div class="post_footer">
+          
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <a id="back_to_top" href="#" class="back_to_top"><span>△</span></a>
+</div>
+<div class="disqus">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "wtser" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+<footer class="footer">
+  <div class="powered_by">
+    <a href="https://zeuk.me">Designed by Zeuk,</a>
+    <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+  </div>
+
+  <div class="footer_slogan">
+    <span></span>
+  </div>
+</footer>
+
+
+
+<script src="//wtser.com/js/jquery-3.3.1.min.js"></script>
+<script src="//wtser.com/js/zozo.js"></script>
+<script src="//wtser.com/js/highlight.pack.js"></script>
+<link  href="//wtser.com/css/fancybox.min.css" rel="stylesheet">
+<script src="//wtser.com/js/fancybox.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad()</script>
+
+
+  <script type="text/javascript" async src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+
+
+
+
+</body>
+</html>

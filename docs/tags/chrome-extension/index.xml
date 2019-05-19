@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>chrome extension on 王铁手的博客</title>
+    <link>//wtser.com/tags/chrome-extension/</link>
+    <description>Recent content in chrome extension on 王铁手的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 20 Apr 2015 10:01:16 +0800</lastBuildDate>
+    
+	<atom:link href="//wtser.com/tags/chrome-extension/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>chrome 扩展 十阅 （TenRead）</title>
+      <link>//wtser.com/posts/chrome%E6%89%A9%E5%B1%95%E5%8D%81%E9%98%85tenread/</link>
+      <pubDate>Mon, 20 Apr 2015 10:01:16 +0800</pubDate>
+      
+      <guid>//wtser.com/posts/chrome%E6%89%A9%E5%B1%95%E5%8D%81%E9%98%85tenread/</guid>
+      <description>为何要做这个东西 满足自身需求 之前一直有订阅 rss 的习惯，有博客也有各种聚合站。 博客类的站点更新频率不是特别频繁，但是几个聚合站点，例如 hacker news 等，每日更新内容特别多，每天都看不完。日积月累，一个月下来就要奔溃</description>
+    </item>
+    
+  </channel>
+</rss>

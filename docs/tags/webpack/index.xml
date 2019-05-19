@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>webpack on 王铁手的博客</title>
+    <link>//wtser.com/tags/webpack/</link>
+    <description>Recent content in webpack on 王铁手的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 08 Jul 2016 10:25:13 +0800</lastBuildDate>
+    
+	<atom:link href="//wtser.com/tags/webpack/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Try Webpack</title>
+      <link>//wtser.com/posts/try-webpack/</link>
+      <pubDate>Fri, 08 Jul 2016 10:25:13 +0800</pubDate>
+      
+      <guid>//wtser.com/posts/try-webpack/</guid>
+      <description>前不久把 sf 前端的构建工具进行了改进和优化，用上了目前非常火的 webpack 、babel 和 es6 等等新技术。 历史 sf 前端的构建工具最早使用的是当时非常流行的 grunt，接下来是 gulp，然后就是现在的 webpack。 构建</description>
+    </item>
+    
+  </channel>
+</rss>
