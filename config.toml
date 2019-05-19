@@ -7,7 +7,7 @@ summaryLength = 100
 paginate = 4                         # shows the number of articles  # 首页显示文章数量
 enableEmoji = true
 googleAnalytics = ""                 # your google analytics id
-disqusShortname = "wtser"                 # your discuss shortname
+# disqusShortname = "wtser"                 # your discuss shortname
 
 [author]                             # essential                     # 必需
   name = "wtser"
@@ -54,3 +54,13 @@ disqusShortname = "wtser"                 # your discuss shortname
   github = "https://github.com/wtser"
   twitter = "https://twitter.com/wtser"
 #  instagram = " "
+
+# Valine.
+# You can get your appid and appkey from https://leancloud.cn
+# more info please open https://valine.js.org
+[params.valine]
+  enable = true
+  appId = "E7daDgYTACtJ6CFJ8zpd6IdN-gzGzoHsz"
+  appKey = "RnK8XLUV7xuKwjLO71QqO5QS"
+  placeholder = " "
+  visitor = true
