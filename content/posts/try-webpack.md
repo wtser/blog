@@ -1,7 +1,7 @@
 ---
 title: "Try Webpack"
 date: 2016-07-08T10:25:13+08:00
-draft: true
+draft: false
 tags: ["webpack"]
 keywords: []
 description: ""

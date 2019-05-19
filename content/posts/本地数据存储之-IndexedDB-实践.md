@@ -1,7 +1,7 @@
 ---
 title: "本地数据存储之 IndexedDB 实践"
 date: 2014-12-14T10:57:34+08:00
-draft: true
+draft: false
 tags: []
 keywords: []
 description: ""
