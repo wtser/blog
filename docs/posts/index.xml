@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 王铁手的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 23 Feb 2019 20:55:19 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 25 May 2019 13:22:12 +0800</lastBuildDate>
     
 	<atom:link href="//wtser.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>断舍离之 net services</title>
+      <link>//wtser.com/posts/%E6%96%AD%E8%88%8D%E7%A6%BB%E4%B9%8B-net-services/</link>
+      <pubDate>Sat, 25 May 2019 13:22:12 +0800</pubDate>
+      
+      <guid>//wtser.com/posts/%E6%96%AD%E8%88%8D%E7%A6%BB%E4%B9%8B-net-services/</guid>
+      <description>使用 vultr 也有相当长的一段时间了，最近苦恼于其速度不太理想，晚上高峰时间更是接近不可用的状态，不得不思考新的出路。 调查研究后明白只能更换线路才能彻底解决，最好的线路是 CN2 GIA。 购买了 bandwagonhost CN2 GIA 线路的 vps，更</description>
+    </item>
     
     <item>
       <title>2018 年终总结</title>

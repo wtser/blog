@@ -3,20 +3,61 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>//wtser.com/posts/2018-%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</loc>
-    <lastmod>2019-02-23T20:55:19+08:00</lastmod>
+    <loc>//wtser.com/tags/cn2/</loc>
+    <lastmod>2019-05-25T13:22:12+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//wtser.com/tags/gia/</loc>
+    <lastmod>2019-05-25T13:22:12+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>//wtser.com/posts/</loc>
-    <lastmod>2019-02-23T20:55:19+08:00</lastmod>
+    <lastmod>2019-05-25T13:22:12+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>//wtser.com/</loc>
-    <lastmod>2019-02-23T20:55:19+08:00</lastmod>
+    <loc>//wtser.com/tags/</loc>
+    <lastmod>2019-05-25T13:22:12+08:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//wtser.com/tags/bandwagonhost/</loc>
+    <lastmod>2019-05-25T13:22:12+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//wtser.com/tags/vultr/</loc>
+    <lastmod>2019-05-25T13:22:12+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//wtser.com/tags/%E6%96%AD%E8%88%8D%E7%A6%BB/</loc>
+    <lastmod>2019-05-25T13:22:12+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//wtser.com/posts/%E6%96%AD%E8%88%8D%E7%A6%BB%E4%B9%8B-net-services/</loc>
+    <lastmod>2019-05-25T13:22:12+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wtser.com/</loc>
+    <lastmod>2019-05-25T13:22:12+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//wtser.com/posts/2018-%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2019-02-23T20:55:19+08:00</lastmod>
   </url>
   
   <url>
@@ -27,12 +68,6 @@
   <url>
     <loc>//wtser.com/posts/2018%E4%B8%80%E4%BA%9B%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2018-04-15T08:36:14+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>//wtser.com/tags/</loc>
-    <lastmod>2018-02-06T10:00:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

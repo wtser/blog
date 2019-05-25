@@ -10,6 +10,8 @@
         content="wtser"/>
 
   
+  <meta name="description" content="使用 vultr 也有相当长的一段时间了，最近苦恼于其速度不太理想，晚上高峰时间更是接近不可用的状态，不得不思考新的出路。 调查研究后明白只能更换线路才能彻底解决，最好的线路是 CN2 GIA。 购买了 bandwagonhost CN2 GIA 线路的 vps，更"/>
+  
 
   
   
@@ -17,13 +19,11 @@
   
 
   
-  <link rel="canonical" href="//wtser.com/tags/chrome-extension/"/>
+  <link rel="canonical" href="//wtser.com/posts/%E6%96%AD%E8%88%8D%E7%A6%BB%E4%B9%8B-net-services/"/>
 
   
-  <link rel="alternate" type="application/rss&#43;xml" href="//wtser.com/tags/chrome-extension/index.xml">
-  
 
-  <title>chrome extension &middot; 王铁手的博客</title>
+  <title>断舍离之 net services &middot; 王铁手的博客</title>
 
   <link rel="shortcut icon" href="//wtser.com/images/favicon.ico"/>
   <link rel="stylesheet" href="//wtser.com/css/animate.min.css"/>
@@ -108,24 +108,97 @@
 </div>
 
   <div class="content">
-    <div class="list_with_title">
-      
-      <div class="listing_title">2015</div>
-      <div class="listing">
-        
-        <div class="listing_item">
-          <div class="listing_post">
-            <a href="/posts/chrome%E6%89%A9%E5%B1%95%E5%8D%81%E9%98%85tenread/">chrome 扩展 十阅 （TenRead）</a>
-            <div class="post_time"><span class="date">04-20</span></div>
-          </div>
+    <div class="post_page">
+      <div class="post animated fadeInDown">
+        <div class="post_title post_detail_title">
+          <h2><a href='/posts/%E6%96%AD%E8%88%8D%E7%A6%BB%E4%B9%8B-net-services/'>断舍离之 net services</a></h2>
+          <span class="date">2019.05.25</span>
         </div>
-        
+        <div class="post_content markdown"><p>使用 vultr 也有相当长的一段时间了，最近苦恼于其速度不太理想，晚上高峰时间更是接近不可用的状态，不得不思考新的出路。</p>
+
+<p>调查研究后明白只能更换线路才能彻底解决，最好的线路是 CN2 GIA。</p>
+
+<p>购买了 bandwagonhost CN2 GIA 线路的 vps，更换线路后，速度稳定很多，但是 vps 配置较差，内存只有 512M，很多应用编译都困难，更不要说运行了。</p>
+
+<p>考虑到 vultr 虽然配置高，但是部署的服务大部分时间属于闲置吃灰状态，决定不用 vultr 以节省部分开销。</p>
+
+<p>自己目前的需求</p>
+
+<ol>
+<li>proxy
+
+<ol>
+<li>出国加速</li>
+<li>反向代理</li>
+</ol></li>
+<li>blog</li>
+<li>cloud storage</li>
+</ol>
+
+<p>思考了一下，最终的解决方案</p>
+
+<ul>
+<li><p><strong>proxy 用 bandwagonhost cn2 gia 线路 vps</strong>
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Feeeb66e8-32c1-4f41-8d70-a0a13ccb21d8%2FUntitled.png?table=block&amp;id=ffa4a69a-781b-4b0d-8595-d0dfb18673e9&amp;width=2530&amp;cache=v2" alt="" /></p></li>
+
+<li><p><strong>blog 使用 github pages 和 coding pages 做双线部署，国内国外分开进行访问加速。</strong>
+<img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe660419d-a993-4b6d-9cd2-67df82ceba1f%2FUntitled.png?table=block&amp;id=c7aae48e-ed3e-41ad-a42a-78acf21ede67&amp;width=1670&amp;cache=v2" alt="" /></p></li>
+
+<li><p><strong>cloud storage 之前用的自建 seafile，迁移到 onedrive。</strong></p></li>
+</ul>
+</div>
+        <div class="post_footer">
+          
+          <div class="meta">
+            <div class="info">
+              <span class="field tags">
+                <i class="remixicon-stack-line"></i>
+                
+                <a href="//wtser.com/tags/%E6%96%AD%E8%88%8D%E7%A6%BB/">断舍离</a>
+                
+                <a href="//wtser.com/tags/vultr/">vultr</a>
+                
+                <a href="//wtser.com/tags/bandwagonhost/">bandwagonhost</a>
+                
+                <a href="//wtser.com/tags/cn2/">CN2</a>
+                
+                <a href="//wtser.com/tags/gia/">GIA</a>
+                
+              </span>
+            </div>
+          </div>
+          
+        </div>
       </div>
       
+      
+      
+<div class="doc_comments">
+  <div class="comments_block_title">发表评论</div>
+  <div id="vcomments"></div>
+</div>
+
+<link rel="stylesheet" href="//wtser.com/css/comments.css"/>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+<script type="text/javascript">
+new Valine({
+  el: '#vcomments',
+  appId: 'E7daDgYTACtJ6CFJ8zpd6IdN-gzGzoHsz',
+  appKey: 'RnK8XLUV7xuKwjLO71QqO5QS',
+  placeholder: ' ',
+  visitor: 'true',
+})
+</script>
+
+      
     </div>
-    <div class="pagination"></div>
   </div>
   <a id="back_to_top" href="#" class="back_to_top"><span>△</span></a>
+</div>
+<div class="disqus">
+  
 </div>
 <footer class="footer">
   <div class="powered_by">
