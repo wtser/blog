@@ -2,7 +2,7 @@
 title: "利用闲置 PC 搭建 NAS 媒体中心 远程下载"
 date: 2017-12-03T10:00:00+08:00
 draft: false
-tags: ["nas", "plex", "aria2"]
+tags: ["nas", "plex", "aria2","trial"]
 slug: ""
 ---
 

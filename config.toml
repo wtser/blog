@@ -34,6 +34,16 @@ googleAnalytics = ""                 # your google analytics id
   identifier = "project"
   url = "/tags/project"
 [[menu.main]]
+  name = "试验"
+  weight = 20
+  identifier = "trial"
+  url = "/tags/trial"
+[[menu.main]]
+  name = "阅读"
+  weight = 20
+  identifier = "reading"
+  url = "/tags/reading"
+[[menu.main]]
   name = "归档"
   weight = 30
   identifier = "archive"

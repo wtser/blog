@@ -2,7 +2,7 @@
 title: "日本海淘 kindlePaperWhite"
 date: 2013-03-14T20:35:22+08:00
 draft: false
-tags: ["kindle", "paperwhite", "海淘", "亚马逊"]
+tags: ["kindle", "paperwhite", "海淘", "亚马逊","trial"]
 ---
 
 周末在家，实在无聊，打开豆瓣小组，突然想找 kindle 小组看看，然后看到一篇帖子推荐大家去海淘 kindle，内心顿时波涛汹涌了。
