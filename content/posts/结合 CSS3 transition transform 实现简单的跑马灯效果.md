@@ -10,7 +10,7 @@ slug: ""
 
 ## 思考过程
 
-![思考过程](https://sfault-image.b0.upaiyun.com/229/355/2293555127-5a7d1130d6296)
+![思考过程](https://image-static.segmentfault.com/229/355/2293555127-5a7d1130d6296_articlex)
 
 ## html
 

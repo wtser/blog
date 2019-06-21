@@ -31,5 +31,5 @@ tags: ["kindle", "paperwhite", "海淘", "亚马逊","trial"]
 
 ## 补图
 
-![邮政ems单号记录](https://sfault-image.b0.upaiyun.com/358/293/3582936281-5784f07bb9354)
-![js转送信息](https://sfault-image.b0.upaiyun.com/137/712/1377129035-5784f0bb6c321)
+![邮政ems单号记录](https://image-static.segmentfault.com/358/293/3582936281-5784f07bb9354)
+![js转送信息](https://image-static.segmentfault.com/137/712/1377129035-5784f0bb6c321)

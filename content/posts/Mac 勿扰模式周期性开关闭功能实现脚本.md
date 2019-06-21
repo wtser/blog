@@ -6,7 +6,7 @@ tags: ["applescript", "DNT", "project"]
 slug: "auto-dnt-for-mac-with-applescript"
 ---
 
-![](https://sfault-image.b0.upaiyun.com/992/660/992660630-59f6de4fba1ae)
+![](https://image-static.segmentfault.com/992/660/992660630-59f6de4fba1ae)
 
 专心开发工作的时候，通知滴滴答答响个不停，影响效率和心情? 。
 

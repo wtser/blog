@@ -80,6 +80,6 @@ slug: ""
 
 ![配置页面][3]
 
-[1]: https://sfault-image.b0.upaiyun.com/312/917/3129176156-5535160977568_articlex
-[2]: https://sfault-image.b0.upaiyun.com/102/079/1020794188-553515ffddfc7_articlex
-[3]: https://sfault-image.b0.upaiyun.com/106/578/1065781510-553515ec64def_articlex
+[1]: https://image-static.segmentfault.com/312/917/3129176156-5535160977568_articlex
+[2]: https://image-static.segmentfault.com/102/079/1020794188-553515ffddfc7_articlex
+[3]: https://image-static.segmentfault.com/106/578/1065781510-553515ec64def_articlex
