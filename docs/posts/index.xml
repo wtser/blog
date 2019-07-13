@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 王铁手的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 25 May 2019 13:22:12 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jul 2019 10:37:13 +0800</lastBuildDate>
     
 	<atom:link href="//wtser.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>重构 qrCreater 网址二维码一键生成工具</title>
+      <link>//wtser.com/posts/reconsitution-of-qr-creater-extension/</link>
+      <pubDate>Sat, 13 Jul 2019 10:37:13 +0800</pubDate>
+      
+      <guid>//wtser.com/posts/reconsitution-of-qr-creater-extension/</guid>
+      <description>最近天天加班，无奈。频频要到手机上去测试页面。最快捷的方法就是把网址生成为一个二维码，手机上一扫即可访问。 自己写过一个 chrome 扩展，上一次的版本还停留在 2014 年，当时的我刚刚毕业不久，用的 jquery qr 插件实现。 界面简陋</description>
+    </item>
     
     <item>
       <title>断舍离之 net services</title>

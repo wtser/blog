@@ -10,6 +10,8 @@
         content="wtser"/>
 
   
+  <meta name="description" content="最近天天加班，无奈。频频要到手机上去测试页面。最快捷的方法就是把网址生成为一个二维码，手机上一扫即可访问。 自己写过一个 chrome 扩展，上一次的版本还停留在 2014 年，当时的我刚刚毕业不久，用的 jquery qr 插件实现。 界面简陋"/>
+  
 
   
   
@@ -17,13 +19,11 @@
   
 
   
-  <link rel="canonical" href="//wtser.com/tags/project/"/>
+  <link rel="canonical" href="//wtser.com/posts/reconsitution-of-qr-creater-extension/"/>
 
   
-  <link rel="alternate" type="application/rss&#43;xml" href="//wtser.com/tags/project/index.xml">
-  
 
-  <title>project &middot; 王铁手的博客</title>
+  <title>重构 qrCreater 网址二维码一键生成工具 &middot; 王铁手的博客</title>
 
   <link rel="shortcut icon" href="//wtser.com/images/favicon.ico"/>
   <link rel="stylesheet" href="//wtser.com/css/animate.min.css"/>
@@ -116,60 +116,88 @@
 </div>
 
   <div class="content">
-    <div class="list_with_title">
-      
-      <div class="listing_title">2019</div>
-      <div class="listing">
-        
-        <div class="listing_item">
-          <div class="listing_post">
-            <a href="/posts/reconsitution-of-qr-creater-extension/">重构 qrCreater 网址二维码一键生成工具</a>
-            <div class="post_time"><span class="date">07-13</span></div>
-          </div>
+    <div class="post_page">
+      <div class="post animated fadeInDown">
+        <div class="post_title post_detail_title">
+          <h2><a href='/posts/reconsitution-of-qr-creater-extension/'>重构 qrCreater 网址二维码一键生成工具</a></h2>
+          <span class="date">2019.07.13</span>
         </div>
-        
+        <div class="post_content markdown">
+
+<p>最近天天加班，无奈。频频要到手机上去测试页面。最快捷的方法就是把网址生成为一个二维码，手机上一扫即可访问。</p>
+
+<p>自己写过一个 chrome 扩展，上一次的版本还停留在 2014 年，当时的我刚刚毕业不久，用的 jquery qr 插件实现。</p>
+
+<p>界面简陋，功能好用，过去了这么多年，现在再来看当年做的，感觉太丑了，而且在 dark mode 下 icon 也看不清了，索性就来改一改。</p>
+
+<h2 id="第一版">第一版</h2>
+
+<p>icon 改成了暗红色，去掉了底部的输入框生成二维码，因为我自己极少用到这个功能。</p>
+
+<p><img src="https://camo.githubusercontent.com/bc552b38f56d4cd19053413f14ab96ab8724c576/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f32305f4947504346386d73305a66315a6f5247564771666e3655386674396376326e7554504f5334715573624d6573366155695a626e64393776537863635371626154357852432d5f506b3d773634302d683430302d65333635" alt="qrCreater 1.2" /></p>
+
+<p>周末发布，周一就有老同事找我，说你的插件怎么把输入框功能去掉了。</p>
+
+<p>感动，想不到这么多年，老同事一直在用我写的插件，想着抽空完善一下。</p>
+
+<h2 id="第二版">第二版</h2>
+
+<p>今天抽空再次完善了一下，加入了输入框，兼顾美观。</p>
+
+<p>替换了臃肿的 jquery qr，采用了更加小巧的 kjua，最终扩展的体积缩小到了 14.47KiB。</p>
+
+<p>顺便说一句，用 parcel 来打包真的很方便。</p>
+
+<p><img src="https://lh3.googleusercontent.com/w3z8kDO1PlYpZaYRvj94k9wMrBLdt8z5fyzM-2uVrYaxZumOMzbPy_8jqKzL7ezR0HA9VO209Q=w640-h400-e365" alt="qrCreater 1.3" /></p>
+
+<p>大家可以在 <a href="https://chrome.google.com/webstore/detail/qrcreater-%E7%BD%91%E5%9D%80%E4%BA%8C%E7%BB%B4%E7%A0%81%E4%B8%80%E9%94%AE%E7%94%9F%E6%88%90%E5%B7%A5%E5%85%B7/kpbkbekmhiifnijhhfmahckmlbcbinfc">chrome 应用商店</a> 找到该扩展，如果觉得这个扩展对你有用，请点赞哦。</p>
+</div>
+        <div class="post_footer">
+          
+          <div class="meta">
+            <div class="info">
+              <span class="field tags">
+                <i class="remixicon-stack-line"></i>
+                
+                <a href="//wtser.com/tags/project/">project</a>
+                
+                <a href="//wtser.com/tags/qr-code/">QR code</a>
+                
+              </span>
+            </div>
+          </div>
+          
+        </div>
       </div>
       
-      <div class="listing_title">2018</div>
-      <div class="listing">
-        
-        <div class="listing_item">
-          <div class="listing_post">
-            <a href="/posts/%E7%BB%93%E5%90%88-css3-transition-transform-%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%9A%84%E8%B7%91%E9%A9%AC%E7%81%AF%E6%95%88%E6%9E%9C/">结合 CSS3 transition transform 实现简单的跑马灯效果</a>
-            <div class="post_time"><span class="date">02-06</span></div>
-          </div>
-        </div>
-        
-      </div>
       
-      <div class="listing_title">2017</div>
-      <div class="listing">
-        
-        <div class="listing_item">
-          <div class="listing_post">
-            <a href="/posts/auto-dnt-for-mac-with-applescript/">Mac 勿扰模式周期性开关闭功能实现脚本</a>
-            <div class="post_time"><span class="date">10-30</span></div>
-          </div>
-        </div>
-        
-      </div>
       
-      <div class="listing_title">2015</div>
-      <div class="listing">
-        
-        <div class="listing_item">
-          <div class="listing_post">
-            <a href="/posts/chrome%E6%89%A9%E5%B1%95%E5%8D%81%E9%98%85tenread/">chrome 扩展 十阅 （TenRead）</a>
-            <div class="post_time"><span class="date">04-20</span></div>
-          </div>
-        </div>
-        
-      </div>
+<div class="doc_comments">
+  <div class="comments_block_title">发表评论</div>
+  <div id="vcomments"></div>
+</div>
+
+<link rel="stylesheet" href="//wtser.com/css/comments.css"/>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+<script type="text/javascript">
+new Valine({
+  el: '#vcomments',
+  appId: 'E7daDgYTACtJ6CFJ8zpd6IdN-gzGzoHsz',
+  appKey: 'RnK8XLUV7xuKwjLO71QqO5QS',
+  placeholder: ' ',
+  visitor: 'true',
+})
+</script>
+
       
     </div>
-    <div class="pagination"></div>
   </div>
   <a id="back_to_top" href="#" class="back_to_top"><span>△</span></a>
+</div>
+<div class="disqus">
+  
 </div>
 <footer class="footer">
   <div class="powered_by">
