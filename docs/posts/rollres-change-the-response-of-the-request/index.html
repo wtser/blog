@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn" >
 <head>
-	<meta name="generator" content="Hugo 0.55.6" />
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -11,6 +10,8 @@
         content="wtser"/>
 
   
+  <meta name="description" content="最近在做一个 NHK 奥运会的项目,目前进入的开发的第二阶段，数据也越来越多。 我们知道，开发的测试环境和生产环境的数据可能会有很大的不同，测试环境无法 100% 模拟生产环境，有些时候我们需要处理一些前端的展示问题，但"/>
+  
 
   
   
@@ -18,13 +19,11 @@
   
 
   
-  <link rel="canonical" href="//wtser.com/"/>
+  <link rel="canonical" href="//wtser.com/posts/rollres-change-the-response-of-the-request/"/>
 
   
-  <link rel="alternate" type="application/rss&#43;xml" href="//wtser.com/index.xml">
-  
 
-  <title>王铁手的博客</title>
+  <title>写了一个 js css 在线联调工具 RollRes  &middot; 王铁手的博客</title>
 
   <link rel="shortcut icon" href="//wtser.com/images/favicon.ico"/>
   <link rel="stylesheet" href="//wtser.com/css/animate.min.css"/>
@@ -117,149 +116,78 @@
 </div>
 
   <div class="content">
-    
+    <div class="post_page">
+      <div class="post animated fadeInDown">
+        <div class="post_title post_detail_title">
+          <h2><a href='/posts/rollres-change-the-response-of-the-request/'>写了一个 js css 在线联调工具 RollRes </a></h2>
+          <span class="date">2019.08.13</span>
+        </div>
+        <div class="post_content markdown"><p>最近在做一个 <a href="https://sports.nhk.or.jp/olympic/">NHK 奥运会</a>的项目,目前进入的开发的第二阶段，数据也越来越多。</p>
 
+<p>我们知道，开发的测试环境和生产环境的数据可能会有很大的不同，测试环境无法 100% 模拟生产环境，有些时候我们需要处理一些前端的展示问题，但是测试环境无法模拟的情况下怎么办呢？不可能改一点就部署到生产环境去测吧，这属于撞大运编程，而且部署的时间成本也很高。</p>
 
-<div class="post animated fadeInDown">
-  <div class="post_title">
-    <h2><a href='/posts/auto-dnt-for-mac-with-applescript/'>Mac 勿扰模式周期性开关闭功能实现脚本</a></h2>
-  </div>
-  
-  <div class="list">
-    <div class="post_content markdown">
-      <p>专心开发工作的时候，通知滴滴答答响个不停，影响效率和心情? 。 发现 Mac 提供了临时屏蔽通知的功能，就是勿扰模式。 不错，可以安心工作了。缺点就是容易忘记关闭勿扰，错过一些重要的通知。 可是每次手动开启关闭又显得......</p>
-    </div>
-  </div>
-  
-  <div class="post_footer">
-    <div class="meta">
-      <div class="info">
-        <span class="field">
-          <i class="remixicon-map-pin-time-line"></i>
-          <span class="date">2017.10.30</span>
-        </span>
-        
-        <span class="field tags">
-          <i class="remixicon-stack-line"></i>
+<p>既然 debug 的成本都很高，有没有一种方法可以快速，低成本，高效的解决这个问题呢？</p>
+
+<p>想必大家早已猜到，那就是将生产环境的资源文件（js，css）替换为本地开发的版本即可。</p>
+
+<p>实现此类功能的扩展很多，例如 chrome 上就有 <a href="https://chrome.google.com/webstore/detail/reres/gieocpkbblidnocefjakldecahgeeica">ReRes</a></p>
+
+<p><img src="https://lh3.googleusercontent.com/va7QqVzWp6dZMAl-x4M9i9fF1gnAQPVbnZeEsCO_ZuE0r-K_zZ2sM1xz40TgK-l1AjeOfDSnhg=w640-h400-e365" alt="" /></p>
+
+<p>好用，就是界面有点看着难受，作者也很久没有维护了，我用了一段时间，实在受不了这个审美，也找不到其他类似的扩展，于是研究了它的核心代码，实现了一个 <a href="https://chrome.google.com/webstore/detail/rollres-change-the-respon/hbikkeelnonljdhjooeplbegdmfkjhbk">RollRes</a> ，仅仅 18.92KiB 大小，远远小于同类扩展。</p>
+
+<p><img src="/img/rollres/1.png" alt="" />
+<img src="/img/rollres/2.png" alt="" />
+<img src="/img/rollres/3.png" alt="" /></p>
+
+<p>大家可以在 <a href="https://chrome.google.com/webstore/detail/rollres-change-the-respon/hbikkeelnonljdhjooeplbegdmfkjhbk">chrome 应用商店</a> 找到该扩展，如果觉得这个扩展对你有用，请点赞，评论哦。</p>
+</div>
+        <div class="post_footer">
           
-          <a href="//wtser.com/tags/applescript/">applescript</a>
+          <div class="meta">
+            <div class="info">
+              <span class="field tags">
+                <i class="remixicon-stack-line"></i>
+                
+                <a href="//wtser.com/tags/project/">project</a>
+                
+                <a href="//wtser.com/tags/rollres/">RollRes</a>
+                
+              </span>
+            </div>
+          </div>
           
-          <a href="//wtser.com/tags/dnt/">DNT</a>
-          
-          <a href="//wtser.com/tags/project/">project</a>
-          
-        </span>
-        
+        </div>
       </div>
-    </div>
-  </div>
+      
+      
+      
+<div class="doc_comments">
+  <div class="comments_block_title">发表评论</div>
+  <div id="vcomments"></div>
 </div>
 
-<div class="post animated fadeInDown">
-  <div class="post_title">
-    <h2><a href='/posts/try-webpack/'>Try Webpack</a></h2>
-  </div>
-  
-  <div class="list">
-    <div class="post_content markdown">
-      <p>前不久把 sf 前端的构建工具进行了改进和优化，用上了目前非常火的 webpack 、babel 和 es6 等等新技术。 历史 sf 前端的构建工具最早使用的是当时非常流行的 grunt，接下来是 gulp，然后就是现在的 webpack。 构建......</p>
+<link rel="stylesheet" href="//wtser.com/css/comments.css"/>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+<script type="text/javascript">
+new Valine({
+  el: '#vcomments',
+  appId: 'E7daDgYTACtJ6CFJ8zpd6IdN-gzGzoHsz',
+  appKey: 'RnK8XLUV7xuKwjLO71QqO5QS',
+  placeholder: ' ',
+  visitor: 'true',
+})
+</script>
+
+      
     </div>
   </div>
-  
-  <div class="post_footer">
-    <div class="meta">
-      <div class="info">
-        <span class="field">
-          <i class="remixicon-map-pin-time-line"></i>
-          <span class="date">2016.07.08</span>
-        </span>
-        
-        <span class="field tags">
-          <i class="remixicon-stack-line"></i>
-          
-          <a href="//wtser.com/tags/webpack/">webpack</a>
-          
-        </span>
-        
-      </div>
-    </div>
-  </div>
+  <a id="back_to_top" href="#" class="back_to_top"><span>△</span></a>
 </div>
-
-<div class="post animated fadeInDown">
-  <div class="post_title">
-    <h2><a href='/posts/2015-%E6%80%BB%E7%BB%93/'>2015 总结</a></h2>
-  </div>
+<div class="disqus">
   
-  <div class="list">
-    <div class="post_content markdown">
-      <p>2015 年，对我来说注定是一个充满改变的一年。 为了改变，离开了毕业后一直工作 2 年的创业公司，2 月 2 日正式入职 SegmentFault，这是这一年发生的一切的起点。 生活 开始从赶公交上班切换到走路上班模式。 女友......</p>
-    </div>
-  </div>
-  
-  <div class="post_footer">
-    <div class="meta">
-      <div class="info">
-        <span class="field">
-          <i class="remixicon-map-pin-time-line"></i>
-          <span class="date">2016.01.01</span>
-        </span>
-        
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="post animated fadeInDown">
-  <div class="post_title">
-    <h2><a href='/posts/%E7%A8%80%E7%BC%BA%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/'>《稀缺》读书笔记</a></h2>
-  </div>
-  
-  <div class="list">
-    <div class="post_content markdown">
-      <p>稀缺心态 贫穷和忙碌并非简单因为缺少金钱和时间，而是一种心态和能力的匮乏。 稀缺会俘获一个人的大脑，使他过于关注稀缺的对象从而失去正常的判断力。 你要什么，不要等急需的时候才去要，而要提前积累。 懒蚂蚁现象 我......</p>
-    </div>
-  </div>
-  
-  <div class="post_footer">
-    <div class="meta">
-      <div class="info">
-        <span class="field">
-          <i class="remixicon-map-pin-time-line"></i>
-          <span class="date">2015.10.08</span>
-        </span>
-        
-        <span class="field tags">
-          <i class="remixicon-stack-line"></i>
-          
-          <a href="//wtser.com/tags/%E7%A8%80%E7%BC%BA/">稀缺</a>
-          
-          <a href="//wtser.com/tags/reading/">reading</a>
-          
-        </span>
-        
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="pagination">
-  
-  
-  <a href="/page/2/" class="pre">
-    Prev
-  </a>
-  
-  
-  <a href="/page/4/" class="next">
-    Next
-  </a>
-  
-  
-</div>
-
-  </div>
 </div>
 <footer class="footer">
   <div class="powered_by">

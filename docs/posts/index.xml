@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 王铁手的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 13 Jul 2019 10:37:13 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 13 Aug 2019 10:37:13 +0800</lastBuildDate>
     
 	<atom:link href="//wtser.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>写了一个 js css 在线联调工具 RollRes </title>
+      <link>//wtser.com/posts/rollres-change-the-response-of-the-request/</link>
+      <pubDate>Tue, 13 Aug 2019 10:37:13 +0800</pubDate>
+      
+      <guid>//wtser.com/posts/rollres-change-the-response-of-the-request/</guid>
+      <description>最近在做一个 NHK 奥运会的项目,目前进入的开发的第二阶段，数据也越来越多。 我们知道，开发的测试环境和生产环境的数据可能会有很大的不同，测试环境无法 100% 模拟生产环境，有些时候我们需要处理一些前端的展示问题，但</description>
+    </item>
     
     <item>
       <title>重构 qrCreater 网址二维码一键生成工具</title>
