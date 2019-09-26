@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-cn" >
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  
+  <meta name="author"
+        content="wtser"/>
+
+  
+  <meta name="description" content="起因 erx 原厂的固件，安装别人写好的 SS 脚本，基本满足需求，但是 dns 解析偶尔抽风，我还在作者项目页面提了issue 。 作者很久没维护了，想了想只能靠自己了。搜了一圈发现 clash 有openwrt 版本，试着部署到 erx 上玩玩"/>
+  
+
+  
+  
+  <meta name="keywords" content="frontend, tech, wtser"/>
+  
+
+  
+  <link rel="canonical" href="//wtser.com/posts/openwrt-clash/"/>
+
+  
+
+  <title>Ubnt erx 刷 openwrt 并用上 clash &middot; 王铁手的博客</title>
+
+  <link rel="shortcut icon" href="//wtser.com/images/favicon.ico"/>
+  <link rel="stylesheet" href="//wtser.com/css/animate.min.css"/>
+  <link rel="stylesheet" href="//wtser.com/css/remixicon.css"/>
+  <link rel="stylesheet" href="//wtser.com/css/zozo.css"/>
+  <link rel="stylesheet" href="//wtser.com/css/highlight.css"/>
+
+  
+  
+
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'kfn1kkp',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+</head>
+
+<body>
+<div class="main animated">
+  <div class="nav_container animated fadeInDown">
+  <div class="site_nav" id="site_nav">
+    <ul>
+      
+      <li>
+        <a href="/">首页</a>
+      </li>
+      
+      <li>
+        <a href="/tags/project">作品</a>
+      </li>
+      
+      <li>
+        <a href="/tags/trial">试验</a>
+      </li>
+      
+      <li>
+        <a href="/tags/reading">阅读</a>
+      </li>
+      
+      <li>
+        <a href="/posts/">归档</a>
+      </li>
+      
+      <li>
+        <a href="/tags/">标签</a>
+      </li>
+      
+      <li>
+        <a href="/about/">关于</a>
+      </li>
+      
+    </ul>
+  </div>
+  <div class="menu_icon">
+    <a id="menu_icon"><i class="remixicon-links-line"></i></a>
+  </div>
+</div>
+
+  <div class="header animated fadeInDown">
+  <div class="site_title_container">
+    <div class="site_title">
+      <h1>
+        <a href="//wtser.com/">
+          <span>王铁手的博客</span>
+          <img src="//wtser.com/images/logo.svg"/>
+        </a>
+      </h1>
+    </div>
+    <div class="description">
+      <p class="sub_title">Find a faster way to fail, recover and try again.</p>
+      <div class="my_socials">
+        
+        
+        <a href="https://github.com/wtser" title="github" target="_blank"><i class="remixicon-github-fill"></i></a>
+        
+        
+        
+        <a href="https://twitter.com/wtser" title="twitter" target="_blank"><i class="remixicon-twitter-fill"></i></a>
+        
+        
+        <a href="//wtser.com/index.xml" type="application/rss+xml" title="rss" target="_blank"><i class="remixicon-rss-fill"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="content">
+    <div class="post_page">
+      <div class="post animated fadeInDown">
+        <div class="post_title post_detail_title">
+          <h2><a href='/posts/openwrt-clash/'>Ubnt erx 刷 openwrt 并用上 clash</a></h2>
+          <span class="date">2019.08.13</span>
+        </div>
+        <div class="post_content markdown">
+
+<h2 id="起因">起因</h2>
+
+<p>erx  原厂的固件，安装<a href="https://github.com/izerosoul/shadowsocks_erx">别人写好的 SS 脚本</a>，基本满足需求，但是 dns 解析偶尔抽风，我还在作者项目页面<a href="https://github.com/izerosoul/shadowsocks_erx/issues/37">提了issue</a> 。</p>
+
+<p>作者很久没维护了，想了想只能靠自己了。搜了一圈发现 <a href="https://github.com/frainzy1477/clash">clash 有openwrt 版本</a>，试着部署到 erx 上玩玩。</p>
+
+<h2 id="过程">过程</h2>
+
+<ol>
+<li>刷 openwrt</li>
+<li>安装 clash</li>
+
+<li><p>安装 <a href="https://github.com/frainzy1477/luci-app-clash">luci-app-clash</a></p>
+
+<p>解决依赖</p></li>
+</ol>
+
+<h2 id="结论">结论</h2>
+
+<p>一路折腾下来，基本上还是顺的。主要遇到 2 处问题。</p>
+
+<p>一个是刷 openwrt 的时候，按照官方提供的指南，使用其提供的最新版镜像，添加系统镜像不成功，后来我自己找了一个别人发的早期教程，下载他提供的低版本就能用。</p>
+
+<p>还有就是安装 luci-app-clash 的时候，要解决依赖问题，以及解决 openwrt 自带 dnsmasq 与其依赖 dnsmasq-full 冲突 （卸载 dnsmasq 然后安装 dnsmasq-full 就行了）。</p>
+
+<h2 id="配图">配图</h2>
+
+<p><img src="/img/Untitled-31e89b2c-cde5-4f8a-aed1-5eded5a7eeb0.png" alt="openwrt 主界面" /></p>
+
+<p>openwrt 主界面</p>
+
+<p><img src="/img/Untitled-fb16a77b-29b6-4113-a0f9-c0f9223bf7d7.png" alt="clash 界面" /></p>
+
+<p>clash 界面</p>
+
+<h2 id="参考链接">参考链接</h2>
+
+<ul>
+<li><p>openwrt 相关</p>
+
+<p><a href="https://openwrt.org/toh/ubiquiti/ubiquiti_edgerouter_x_er-x_ka">https://openwrt.org/toh/ubiquiti/ubiquiti_edgerouter_x_er-x_ka</a></p>
+
+<p><a href="https://an.undulating.space/post/181228-erx_install_openwrt_recover_edgeos/">https://an.undulating.space/post/181228-erx_install_openwrt_recover_edgeos/</a></p></li>
+
+<li><p>代理相关</p>
+
+<p><a href="https://github.com/wtser/shadowsocks_erx">https://github.com/wtser/shadowsocks_erx</a></p>
+
+<p><a href="https://github.com/izerosoul/shadowsocks_erx">https://github.com/izerosoul/shadowsocks_erx</a></p>
+
+<p><a href="https://github.com/frainzy1477/clash">https://github.com/frainzy1477/clash</a></p>
+
+<p><a href="https://github.com/frainzy1477/luci-app-clash">https://github.com/frainzy1477/luci-app-clash</a></p></li>
+
+<li><p>抗 DNS 污染</p>
+
+<p><a href="https://github.com/Fndroid/clash_for_windows_pkg/wiki/DNS%E6%B1%A1%E6%9F%93%E5%AF%B9Clash%EF%BC%88for-Windows%EF%BC%89%E7%9A%84%E5%BD%B1%E5%93%8D">https://github.com/Fndroid/clash_for_windows_pkg/wiki/DNS污染对Clash（for-Windows）的影响</a></p>
+
+<p><a href="https://github.com/frainzy1477/luci-app-clash/wiki/Fake-IP-Mode">https://github.com/frainzy1477/luci-app-clash/wiki/Fake-IP-Mode</a></p>
+
+<p><a href="https://github.com/frainzy1477/clash/issues/31">https://github.com/frainzy1477/clash/issues/31</a></p>
+
+<p><a href="https://github.com/shadowsocks/ChinaDNS">https://github.com/shadowsocks/ChinaDNS</a></p>
+
+<p><a href="https://cyberloginit.com/2019/04/08/chinadns-code-analysis.html">https://cyberloginit.com/2019/04/08/chinadns-code-analysis.html</a></p></li>
+
+<li><p>本案所用的文件</p>
+
+<p>链接: <a href="https://pan.baidu.com/s/1nElWLeEVD1NM7c1n3_LUVA">https://pan.baidu.com/s/1nElWLeEVD1NM7c1n3_LUVA</a> 提取码: 74jf</p></li>
+</ul>
+</div>
+        <div class="post_footer">
+          
+          <div class="meta">
+            <div class="info">
+              <span class="field tags">
+                <i class="remixicon-stack-line"></i>
+                
+                <a href="//wtser.com/tags/life/">life</a>
+                
+                <a href="//wtser.com/tags/ubnt/">ubnt</a>
+                
+                <a href="//wtser.com/tags/openwrt/">openwrt</a>
+                
+                <a href="//wtser.com/tags/clash/">clash</a>
+                
+              </span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      
+      
+<div class="doc_comments">
+  <div class="comments_block_title">发表评论</div>
+  <div id="vcomments"></div>
+</div>
+
+<link rel="stylesheet" href="//wtser.com/css/comments.css"/>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+<script type="text/javascript">
+new Valine({
+  el: '#vcomments',
+  appId: 'E7daDgYTACtJ6CFJ8zpd6IdN-gzGzoHsz',
+  appKey: 'RnK8XLUV7xuKwjLO71QqO5QS',
+  placeholder: ' ',
+  visitor: 'true',
+})
+</script>
+
+      
+    </div>
+  </div>
+  <a id="back_to_top" href="#" class="back_to_top"><span>△</span></a>
+</div>
+<div class="disqus">
+  
+</div>
+<footer class="footer">
+  <div class="powered_by">
+    <a href="https://zeuk.me">Designed by Zeuk,</a>
+    <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+  </div>
+
+  <div class="footer_slogan">
+    <span></span>
+  </div>
+</footer>
+
+
+
+<script src="//wtser.com/js/jquery-3.3.1.min.js"></script>
+<script src="//wtser.com/js/zozo.js"></script>
+<script src="//wtser.com/js/highlight.pack.js"></script>
+<link  href="//wtser.com/css/fancybox.min.css" rel="stylesheet">
+<script src="//wtser.com/js/fancybox.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad()</script>
+
+
+  <script type="text/javascript" async src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+
+
+
+
+</body>
+</html>

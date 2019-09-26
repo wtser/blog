@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>clash on 王铁手的博客</title>
+    <link>//wtser.com/tags/clash/</link>
+    <description>Recent content in clash on 王铁手的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 13 Aug 2019 10:37:13 +0800</lastBuildDate>
+    
+	<atom:link href="//wtser.com/tags/clash/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ubnt erx 刷 openwrt 并用上 clash</title>
+      <link>//wtser.com/posts/install-openwrt-on-erx-and-using-clash/</link>
+      <pubDate>Tue, 13 Aug 2019 10:37:13 +0800</pubDate>
+      
+      <guid>//wtser.com/posts/install-openwrt-on-erx-and-using-clash/</guid>
+      <description>起因 erx 原厂的固件，安装别人写好的 SS 脚本，基本满足需求，但是 dns 解析偶尔抽风，我还在作者项目页面提了issue 。 作者很久没维护了，想了想只能靠自己了。搜了一圈发现 clash 有openwrt 版本，试着部署到 erx 上玩玩</description>
+    </item>
+    
+  </channel>
+</rss>

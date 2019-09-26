@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Ubnt erx 刷 openwrt 并用上 clash</title>
+      <link>//wtser.com/posts/install-openwrt-on-erx-and-using-clash/</link>
+      <pubDate>Tue, 13 Aug 2019 10:37:13 +0800</pubDate>
+      
+      <guid>//wtser.com/posts/install-openwrt-on-erx-and-using-clash/</guid>
+      <description>起因 erx 原厂的固件，安装别人写好的 SS 脚本，基本满足需求，但是 dns 解析偶尔抽风，我还在作者项目页面提了issue 。 作者很久没维护了，想了想只能靠自己了。搜了一圈发现 clash 有openwrt 版本，试着部署到 erx 上玩玩</description>
+    </item>
+    
+    <item>
       <title>写了一个 js css 在线联调工具 RollRes </title>
       <link>//wtser.com/posts/rollres-change-the-response-of-the-request/</link>
       <pubDate>Tue, 13 Aug 2019 10:37:13 +0800</pubDate>

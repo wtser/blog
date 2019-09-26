@@ -21,7 +21,36 @@
   </url>
   
   <url>
+    <loc>//wtser.com/posts/install-openwrt-on-erx-and-using-clash/</loc>
+    <lastmod>2019-08-13T10:37:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wtser.com/tags/clash/</loc>
+    <lastmod>2019-08-13T10:37:13+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//wtser.com/tags/life/</loc>
+    <lastmod>2019-08-13T10:37:13+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//wtser.com/tags/openwrt/</loc>
+    <lastmod>2019-08-13T10:37:13+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>//wtser.com/tags/project/</loc>
+    <lastmod>2019-08-13T10:37:13+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//wtser.com/tags/ubnt/</loc>
     <lastmod>2019-08-13T10:37:13+08:00</lastmod>
     <priority>0</priority>
   </url>
