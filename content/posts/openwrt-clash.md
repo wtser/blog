@@ -2,7 +2,7 @@
 title: "Ubnt erx 刷 openwrt 并用上 clash"
 date: 2019-08-13T10:37:13+08:00
 draft: false
-tags: ["life", "ubnt", "openwrt", "clash"]
+tags: ["trial", "ubnt", "openwrt", "clash"]
 keywords: []
 description: ""
 slug: "install-openwrt-on-erx-and-using-clash"
