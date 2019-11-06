@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ubnt on 王铁手的博客</title>
-    <link>//wtser.com/tags/ubnt/</link>
-    <description>Recent content in ubnt on 王铁手的博客</description>
+    <title>tftp on 王铁手的博客</title>
+    <link>//wtser.com/tags/tftp/</link>
+    <description>Recent content in tftp on 王铁手的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 06 Nov 2019 10:37:13 +0800</lastBuildDate>
     
-	<atom:link href="//wtser.com/tags/ubnt/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//wtser.com/tags/tftp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>//wtser.com/posts/recover-ubnt-erx-router-firmware-by-ttl-tftp/</guid>
       <description>为什么要恢复 因为我把它刷成了 openwrt ⇒ 为了安装 openclash ⇒ 为了更好的展开工作 但是感觉不好用，并且打算通过旁路由的形式实现。 怎么用 TTL 购买一个 USB to TTL 设备，然后把相关的针脚连接好 将USB插入电脑，识别后连接到对应的端口等</description>
-    </item>
-    
-    <item>
-      <title>Ubnt erx 刷 openwrt 并用上 clash</title>
-      <link>//wtser.com/posts/install-openwrt-on-erx-and-using-clash/</link>
-      <pubDate>Tue, 13 Aug 2019 10:37:13 +0800</pubDate>
-      
-      <guid>//wtser.com/posts/install-openwrt-on-erx-and-using-clash/</guid>
-      <description>起因 erx 原厂的固件，安装别人写好的 SS 脚本，基本满足需求，但是 dns 解析偶尔抽风，我还在作者项目页面提了issue 。 作者很久没维护了，想了想只能靠自己了。搜了一圈发现 clash 有openwrt 版本，试着部署到 erx 上玩玩</description>
     </item>
     
   </channel>

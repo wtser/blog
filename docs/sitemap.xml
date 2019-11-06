@@ -3,21 +3,73 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>//wtser.com/tags/erx/</loc>
+    <lastmod>2019-11-06T10:37:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wtser.com/tags/firmware/</loc>
+    <lastmod>2019-11-06T10:37:13+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//wtser.com/posts/</loc>
+    <lastmod>2019-11-06T10:37:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wtser.com/tags/</loc>
+    <lastmod>2019-11-06T10:37:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wtser.com/tags/tftp/</loc>
+    <lastmod>2019-11-06T10:37:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wtser.com/tags/trial/</loc>
+    <lastmod>2019-11-06T10:37:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wtser.com/tags/ttl/</loc>
+    <lastmod>2019-11-06T10:37:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wtser.com/tags/ubnt/</loc>
+    <lastmod>2019-11-06T10:37:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wtser.com/posts/recover-ubnt-erx-router-firmware-by-ttl-tftp/</loc>
+    <lastmod>2019-11-06T10:37:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wtser.com/</loc>
+    <lastmod>2019-11-06T10:37:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wtser.com/tags/clash/</loc>
     <lastmod>2019-08-13T10:37:13+08:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//wtser.com/tags/openwrt/</loc>
+    <lastmod>2019-08-13T10:37:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//wtser.com/tags/project/</loc>
+    <lastmod>2019-08-13T10:37:13+08:00</lastmod>
   </url>
   
   <url>
     <loc>//wtser.com/tags/rollres/</loc>
     <lastmod>2019-08-13T10:37:13+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wtser.com/tags/</loc>
-    <lastmod>2019-08-13T10:37:13+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -26,50 +78,13 @@
   </url>
   
   <url>
-    <loc>//wtser.com/tags/clash/</loc>
-    <lastmod>2019-08-13T10:37:13+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wtser.com/tags/openwrt/</loc>
-    <lastmod>2019-08-13T10:37:13+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wtser.com/tags/project/</loc>
-    <lastmod>2019-08-13T10:37:13+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wtser.com/tags/trial/</loc>
-    <lastmod>2019-08-13T10:37:13+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wtser.com/tags/ubnt/</loc>
-    <lastmod>2019-08-13T10:37:13+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//wtser.com/posts/rollres-change-the-response-of-the-request/</loc>
     <lastmod>2019-08-13T10:37:13+08:00</lastmod>
   </url>
   
   <url>
-    <loc>//wtser.com/</loc>
-    <lastmod>2019-08-13T10:37:13+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>//wtser.com/tags/qr-code/</loc>
     <lastmod>2019-07-13T10:37:13+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -78,33 +93,28 @@
   </url>
   
   <url>
+    <loc>//wtser.com/tags/bandwagonhost/</loc>
+    <lastmod>2019-05-25T13:22:12+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//wtser.com/tags/cn2/</loc>
     <lastmod>2019-05-25T13:22:12+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>//wtser.com/tags/gia/</loc>
     <lastmod>2019-05-25T13:22:12+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>//wtser.com/tags/bandwagonhost/</loc>
-    <lastmod>2019-05-25T13:22:12+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>//wtser.com/tags/vultr/</loc>
     <lastmod>2019-05-25T13:22:12+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>//wtser.com/tags/%E6%96%AD%E8%88%8D%E7%A6%BB/</loc>
     <lastmod>2019-05-25T13:22:12+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -130,25 +140,21 @@
   <url>
     <loc>//wtser.com/tags/reading/</loc>
     <lastmod>2018-04-15T08:36:14+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>//wtser.com/tags/css3/</loc>
     <lastmod>2018-02-06T10:00:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>//wtser.com/tags/transform/</loc>
     <lastmod>2018-02-06T10:00:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>//wtser.com/tags/transition/</loc>
     <lastmod>2018-02-06T10:00:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -159,19 +165,16 @@
   <url>
     <loc>//wtser.com/tags/aria2/</loc>
     <lastmod>2017-12-03T10:00:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>//wtser.com/tags/nas/</loc>
     <lastmod>2017-12-03T10:00:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>//wtser.com/tags/plex/</loc>
     <lastmod>2017-12-03T10:00:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -182,7 +185,6 @@
   <url>
     <loc>//wtser.com/tags/hiwifi/</loc>
     <lastmod>2017-11-19T10:57:48+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -191,20 +193,18 @@
   </url>
   
   <url>
+    <loc>//wtser.com/tags/applescript/</loc>
+    <lastmod>2017-10-30T10:33:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//wtser.com/tags/dnt/</loc>
     <lastmod>2017-10-30T10:33:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>//wtser.com/posts/auto-dnt-for-mac-with-applescript/</loc>
     <lastmod>2017-10-30T10:33:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>//wtser.com/tags/applescript/</loc>
-    <lastmod>2017-10-30T10:33:00+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -215,7 +215,6 @@
   <url>
     <loc>//wtser.com/tags/webpack/</loc>
     <lastmod>2016-07-08T10:25:13+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -231,13 +230,11 @@
   <url>
     <loc>//wtser.com/tags/%E7%A8%80%E7%BC%BA/</loc>
     <lastmod>2015-10-08T10:01:45+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>//wtser.com/tags/chrome-extension/</loc>
     <lastmod>2015-04-20T10:01:16+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -248,7 +245,6 @@
   <url>
     <loc>//wtser.com/tags/rss/</loc>
     <lastmod>2015-04-20T10:01:16+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -264,19 +260,16 @@
   <url>
     <loc>//wtser.com/tags/kindle/</loc>
     <lastmod>2013-03-14T20:35:22+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>//wtser.com/tags/paperwhite/</loc>
     <lastmod>2013-03-14T20:35:22+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>//wtser.com/tags/%E4%BA%9A%E9%A9%AC%E9%80%8A/</loc>
     <lastmod>2013-03-14T20:35:22+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -287,7 +280,6 @@
   <url>
     <loc>//wtser.com/tags/%E6%B5%B7%E6%B7%98/</loc>
     <lastmod>2013-03-14T20:35:22+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -297,7 +289,6 @@
   
   <url>
     <loc>//wtser.com/categories/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>
