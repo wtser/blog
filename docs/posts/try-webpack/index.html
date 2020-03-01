@@ -122,16 +122,10 @@
           <h2><a href='/posts/try-webpack/'>Try Webpack</a></h2>
           <span class="date">2016.07.08</span>
         </div>
-        <div class="post_content markdown">
-
-<p>前不久把 sf 前端的构建工具进行了改进和优化，用上了目前非常火的 webpack 、babel 和 es6 等等新技术。</p>
-
+        <div class="post_content markdown"><p>前不久把 sf 前端的构建工具进行了改进和优化，用上了目前非常火的 webpack 、babel 和 es6 等等新技术。</p>
 <h3 id="历史">历史</h3>
-
 <p>sf 前端的构建工具最早使用的是当时非常流行的 grunt，接下来是 gulp，然后就是现在的 webpack。</p>
-
 <h3 id="构建工具比较">构建工具比较</h3>
-
 <table>
 <thead>
 <tr>
@@ -142,7 +136,6 @@
 <th>Webpack</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>描述</td>
@@ -151,7 +144,6 @@
 <td>The streaming build system</td>
 <td>Packs CommonJs/AMD modules for the browser. Allows to split your codebase into multiple bundles, which can be loaded on demand. Support loaders to preprocess files, i.e. json, jade, coffee, css, less, &hellip; and your custom stuff.</td>
 </tr>
-
 <tr>
 <td>关键词</td>
 <td>browser, require, commonjs, commonj-esque, bundle, npm, javascript</td>
@@ -159,7 +151,6 @@
 <td></td>
 <td></td>
 </tr>
-
 <tr>
 <td>作者</td>
 <td>James Halliday</td>
@@ -167,7 +158,6 @@
 <td>Fractal</td>
 <td>Tobias Koppers @sokra</td>
 </tr>
-
 <tr>
 <td>链接</td>
 <td><a href="https://github.com/substack/node-browserify"> Homepage</a><a href="https://github.com/substack/node-browserify/issues"> Bug Report</a><a href="https://github.com/substack/node-browserify"> Github</a></td>
@@ -175,7 +165,6 @@
 <td><a href="http://gulpjs.com/"> Homepage</a><a href="https://github.com/gulpjs/gulp/issues"> Bug Report</a><a href="https://github.com/gulpjs/gulp"> Github</a></td>
 <td><a href="https://github.com/webpack/webpack"> Homepage</a><a href="https://github.com/webpack/webpack/issues"> Bug Report</a><a href="https://github.com/webpack/webpack"> Github</a></td>
 </tr>
-
 <tr>
 <td><strong>比较</strong></td>
 <td></td>
@@ -183,7 +172,6 @@
 <td></td>
 <td></td>
 </tr>
-
 <tr>
 <td>Licenses</td>
 <td>MIT</td>
@@ -191,7 +179,6 @@
 <td>MIT</td>
 <td>MIT</td>
 </tr>
-
 <tr>
 <td>Created</td>
 <td>5 years ago (Feb, 2011)</td>
@@ -199,7 +186,6 @@
 <td>3 years ago (Jul, 2013)</td>
 <td>4 years ago (Mar, 2012)</td>
 </tr>
-
 <tr>
 <td>版本数量</td>
 <td><strong>459</strong></td>
@@ -207,7 +193,6 @@
 <td>63</td>
 <td>416</td>
 </tr>
-
 <tr>
 <td>版本周期</td>
 <td>every 4 days</td>
@@ -215,7 +200,6 @@
 <td>every 18 days</td>
 <td><strong>every 4 days</strong></td>
 </tr>
-
 <tr>
 <td>依赖数</td>
 <td>46</td>
@@ -225,211 +209,164 @@
 </tr>
 </tbody>
 </table>
-
-<h3 id="什么选择了它-它解决了什么">什么选择了它，它解决了什么</h3>
-
+<h3 id="什么选择了它它解决了什么">什么选择了它，它解决了什么</h3>
 <ul>
-<li>gulp</li>
-</ul>
-
+<li>
+<p>gulp</p>
 <p>配置简单，插件丰富，上手快</p>
-
 <p>解决了 grunt 配置繁琐，不易维护的问题，通过插件扩展进一步提高了开发效率</p>
-
-<ul>
-<li>webpack</li>
-</ul>
-
+</li>
+<li>
+<p>webpack</p>
 <p>解决模块自由引入，打包</p>
-
+</li>
+</ul>
 <p>webpack 解决了 sf 后台存在的历史问题，提高了开发效率</p>
-
 <ol>
 <li>html 模板、js 模块的自由引入，不再依赖配置表</li>
 <li>每次添加新模块，不再需要加入一堆的 script 标签</li>
 <li>代码压缩合并速度提升</li>
 <li>coffee 换成了 js（es6）</li>
 </ol>
-
 <p>Webpack 增加了项目开发的灵活性，优化了性能</p>
-
 <ol>
 <li>提取公用 js 代码</li>
 <li>只要有 loader ，可以自由使用多种语言</li>
 <li>支持按需加载</li>
 </ol>
-
 <h3 id="怎么用">怎么用</h3>
-
-<h4 id="gulp-入门">gulp 入门  </h4>
-
+<h4 id="gulp-入门-">gulp 入门  </h4>
 <p>去年在 SF 技术分享会安利过 gulp <a href="https://wtser.com/building-with-gulp/">building width gulp</a></p>
-
 <h4 id="我们是怎么用-webpack-的">我们是怎么用 webpack 的</h4>
-
 <p>配置 webpack 需要建一个 webpack.config.js 文件。
 建议搭配  webpack-dev-server 使用。<a href="https://webpack.github.io/docs/webpack-dev-server.html">webpack doc webpack-dev-server</a></p>
-
 <p>我们的配置文件大概长这个样子。下面来分析一下。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">webpack</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;webpack&#34;</span>);
 
-<pre><code class="language-javascript">var webpack = require(&quot;webpack&quot;);
-
-var reusePlugin = new webpack.ProvidePlugin({
-  $: &quot;jquery&quot;,
-  jQuery: &quot;jquery&quot;,
-  _: &quot;underscore&quot;,
-  &quot;window.jQuery&quot;: &quot;jquery&quot;,
-  &quot;root.jQuery&quot;: &quot;jquery&quot;
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">reusePlugin</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">webpack</span>.<span style="color:#a6e22e">ProvidePlugin</span>({
+  <span style="color:#a6e22e">$</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;jquery&#34;</span>,
+  <span style="color:#a6e22e">jQuery</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;jquery&#34;</span>,
+  <span style="color:#a6e22e">_</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;underscore&#34;</span>,
+  <span style="color:#e6db74">&#34;window.jQuery&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;jquery&#34;</span>,
+  <span style="color:#e6db74">&#34;root.jQuery&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;jquery&#34;</span>
 });
 
-var config = {
-  context: __dirname + &quot;/src&quot;,
-  devtool: &quot;source-map&quot;,
-  entry: {
-    chart: [&quot;./chart/ChartCtrl.js&quot;, &quot;./chart/ChartDirective.js&quot;],
-    log: &quot;./log/ctrl.js&quot;,
-    dashboard: &quot;./dashboard/ctrl.js&quot;,
-    operation: &quot;./operation/ctrl.js&quot;
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">config</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">context</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">__dirname</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;/src&#34;</span>,
+  <span style="color:#a6e22e">devtool</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;source-map&#34;</span>,
+  <span style="color:#a6e22e">entry</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">chart</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;./chart/ChartCtrl.js&#34;</span>, <span style="color:#e6db74">&#34;./chart/ChartDirective.js&#34;</span>],
+    <span style="color:#a6e22e">log</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;./log/ctrl.js&#34;</span>,
+    <span style="color:#a6e22e">dashboard</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;./dashboard/ctrl.js&#34;</span>,
+    <span style="color:#a6e22e">operation</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;./operation/ctrl.js&#34;</span>
   },
-  output: {
-    path: __dirname + &quot;/dist&quot;,
-    filename: &quot;./[name]/ctrl.js&quot;,
-    publicPath: &quot;/static/dist/&quot;
+  <span style="color:#a6e22e">output</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">__dirname</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;/dist&#34;</span>,
+    <span style="color:#a6e22e">filename</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;./[name]/ctrl.js&#34;</span>,
+    <span style="color:#a6e22e">publicPath</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;/static/dist/&#34;</span>
   },
 
-  devServer: {
-    hot: true,
-    port: 3333,
-    proxy: {
-      &quot;*&quot;: {
-        target: &quot;http://xxadmin.domain.com&quot;,
-        secure: false,
-        changeOrigin: true
+  <span style="color:#a6e22e">devServer</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">hot</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+    <span style="color:#a6e22e">port</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3333</span>,
+    <span style="color:#a6e22e">proxy</span><span style="color:#f92672">:</span> {
+      <span style="color:#e6db74">&#34;*&#34;</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">target</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;http://xxadmin.domain.com&#34;</span>,
+        <span style="color:#a6e22e">secure</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+        <span style="color:#a6e22e">changeOrigin</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
       }
     }
   },
-  module: {
-    loaders: [
+  <span style="color:#a6e22e">module</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">loaders</span><span style="color:#f92672">:</span> [
       {
-        test: /\.js$/,
-        exclude: /(node_modules|bower_components|3rd)/,
-        loader: &quot;babel&quot;, // 'babel-loader' is also a legal name to reference
-        query: {
-          presets: [&quot;es2015&quot;]
+        <span style="color:#a6e22e">test</span><span style="color:#f92672">:</span> <span style="color:#e6db74">/\.js$/</span>,
+        <span style="color:#a6e22e">exclude</span><span style="color:#f92672">:</span> <span style="color:#e6db74">/(node_modules|bower_components|3rd)/</span>,
+        <span style="color:#a6e22e">loader</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;babel&#34;</span>, <span style="color:#75715e">// &#39;babel-loader&#39; is also a legal name to reference
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">query</span><span style="color:#f92672">:</span> {
+          <span style="color:#a6e22e">presets</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;es2015&#34;</span>]
         }
       },
       {
-        test: /\.html$/,
-        loader: &quot;html&quot;
+        <span style="color:#a6e22e">test</span><span style="color:#f92672">:</span> <span style="color:#e6db74">/\.html$/</span>,
+        <span style="color:#a6e22e">loader</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;html&#34;</span>
       },
       {
-        test: /\.css$/,
-        exclude: /(node_modules|bower_components|3rd)/,
-        loader: &quot;style-loader!css-loader&quot;
+        <span style="color:#a6e22e">test</span><span style="color:#f92672">:</span> <span style="color:#e6db74">/\.css$/</span>,
+        <span style="color:#a6e22e">exclude</span><span style="color:#f92672">:</span> <span style="color:#e6db74">/(node_modules|bower_components|3rd)/</span>,
+        <span style="color:#a6e22e">loader</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;style-loader!css-loader&#34;</span>
       },
       {
-        test: /\.scss$/,
-        loaders: [&quot;style&quot;, &quot;css&quot;, &quot;sass&quot;]
+        <span style="color:#a6e22e">test</span><span style="color:#f92672">:</span> <span style="color:#e6db74">/\.scss$/</span>,
+        <span style="color:#a6e22e">loaders</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;style&#34;</span>, <span style="color:#e6db74">&#34;css&#34;</span>, <span style="color:#e6db74">&#34;sass&#34;</span>]
       },
       {
-        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-        loader: &quot;url-loader?limit=100000&quot;
+        <span style="color:#a6e22e">test</span><span style="color:#f92672">:</span> <span style="color:#e6db74">/\.(png|woff|woff2|eot|ttf|svg)$/</span>,
+        <span style="color:#a6e22e">loader</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;url-loader?limit=100000&#34;</span>
       }
     ]
   },
-  plugins: [reusePlugin]
+  <span style="color:#a6e22e">plugins</span><span style="color:#f92672">:</span> [<span style="color:#a6e22e">reusePlugin</span>]
 };
 
-module.exports = config;
-</code></pre>
-
-<h5 id="entry">entry</h5>
-
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">config</span>;
+</code></pre></div><h5 id="entry">entry</h5>
 <p>处理的入口，配置需要处理的 js。entry 有三种写法，每个入口称为一个 chunk。</p>
-
 <ul>
-<li><strong>字符串  </strong> <code>entry: &quot;./index/index.js&quot;</code></li>
+<li>**字符串  ** <code>entry: &quot;./index/index.js&quot;</code></li>
 </ul>
-
 <p>配置模块会被解析为模块，并在启动时加载。默认 chunk 名为 main， 具体打包文件名可在 output 中配置。</p>
-
 <ul>
-<li><strong>数组  </strong> <code>entry: ['./src/mod1.js', [...,] './src/index.js']</code></li>
+<li>**数组  ** <code>entry: ['./src/mod1.js', [...,] './src/index.js']</code></li>
 </ul>
-
 <p>所有的模块会在启动时  <strong>按照配置顺序</strong>  加载，合并到最后一个模块会被导出。默认 chunk 名也是 main。</p>
-
 <ul>
-<li><strong>对象  </strong> <code>entry: {index: '...', login : [...] }</code></li>
+<li>**对象  ** <code>entry: {index: '...', login : [...] }</code></li>
 </ul>
-
 <p>传入 Object，则会生成多个入口打包文件， key 是 chunk 名，value 可以是字符串，也可是数组。</p>
-
 <p>很明显我们采用的是第三种。</p>
-
 <h5 id="output">output</h5>
-
 <p>设置入口配置的文件的输出规则，通过 output 对象实现</p>
-
 <ul>
 <li>output.path</li>
 </ul>
-
 <p>输出文件路径，通常设置为 __dirname + ‘/build’</p>
-
 <ul>
 <li>output.filename:</li>
 </ul>
-
 <p>输出文件名称，有下面列出的四种可选的变量。</p>
-
 <ul>
-<li>- [id] chunk 的 id
-
+<li>
 <ul>
+<li>[id] chunk 的 id</li>
 <li>[name] chunk 名</li>
 <li>[hash] 编译哈希值</li>
 <li>[chunkhash] chunk 的 hash 值</li>
-</ul></li>
 </ul>
-
 <p>filename 配置可以是这几种的任意一种或多种的组合。</p>
-
-<ul>
-<li>output.publicPath</li>
+</li>
+<li>
+<p>output.publicPath</p>
+</li>
 </ul>
-
 <p>设置为想要的资源访问路径。一般使用 webpack-dev-server 时，则需要通过类似 <a href="http://localhost:8080/asstes/index-1.js">http://localhost:8080/asstes/index-1.js</a> 来访问资源，如果没有设置，则默认从站点根目录加载。</p>
-
-<h5 id="web-modules">web_modules</h5>
-
+<h5 id="web_modules">web_modules</h5>
 <p>有些时候，我们用到的第三方库并没有采用 CommonJS 或 AMD 规范。这样我们无法通过 require() 来引用这些库。</p>
-
 <p>Webpack 给出了解决方案，在项目根目录下，创建一个叫做 web_modules 的文件夹，将需要用到的第三方库存放到里面，就可以在逻辑代码中使用 <code>require(‘xx-lib.js’)</code> 来引用并使用了。</p>
-
 <h5 id="去除多个文件中的频繁依赖">去除多个文件中的频繁依赖</h5>
-
 <p>当我们经常使用 React、jQuery 等外部第三方库的时候，通常在每个业务逻辑 JS 中都会遇到这些库。</p>
-
-<p>如我们需要在各个文件中都是有 jQuery 的\$对象，因此我们需要在每个用到 jQuery 的 JS 文件的头部通过 require(&lsquo;jquery&rsquo;)来依赖 jQuery。 这样做非常繁琐且重复。</p>
-
+<p>如我们需要在各个文件中都是有 jQuery 的$对象，因此我们需要在每个用到 jQuery 的 JS 文件的头部通过 require(&lsquo;jquery&rsquo;)来依赖 jQuery。 这样做非常繁琐且重复。</p>
 <p>webpack 提供了我们一种比较高效的方法，我们可以通过在配置文件中配置使用到的变量名，那么 webpack 会自动分析，并且在编译时帮我们完成这些依赖的引入。</p>
-
 <p>这样，我们在 JS 中，就不需要引入 jQuery 等常用模块了，直接使用配置的这些变量，webpack 就会自动引入配置的库。</p>
-
-<pre><code class="language-javascript">new webpack.ProvidePlugin({
-  $: &quot;jquery&quot;,
-  jQuery: &quot;jquery&quot;,
-  _: &quot;underscore&quot;,
-  &quot;window.jQuery&quot;: &quot;jquery&quot;,
-  &quot;root.jQuery&quot;: &quot;jquery&quot;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">new</span> <span style="color:#a6e22e">webpack</span>.<span style="color:#a6e22e">ProvidePlugin</span>({
+  <span style="color:#a6e22e">$</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;jquery&#34;</span>,
+  <span style="color:#a6e22e">jQuery</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;jquery&#34;</span>,
+  <span style="color:#a6e22e">_</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;underscore&#34;</span>,
+  <span style="color:#e6db74">&#34;window.jQuery&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;jquery&#34;</span>,
+  <span style="color:#e6db74">&#34;root.jQuery&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;jquery&#34;</span>
 });
-</code></pre>
-
-<h5 id="功能标识-feature-flags">功能标识（Feature flags）</h5>
-
+</code></pre></div><h5 id="功能标识feature-flags">功能标识（Feature flags）</h5>
 <p>项目中有些代码我们只为在开发环境（例如日志）或者是内部测试环境（例如那些没有发布的新功能）中使用，又不想让这些调试内容在发布的时候泄露出去,那就需要引入下面这些魔法全局变量（magic globals）：</p>
-
 <pre><code>if (__DEV__) {
   console.warn('Extra logging');
 }
@@ -437,10 +374,7 @@ module.exports = config;
 if (__PRERELEASE__) {
   showSecretFeature();
 }
-</code></pre>
-
-<p>同时还要在 webpack.config.js 中配置这些变量，使得 webpack 能够识别他们。</p>
-
+</code></pre><p>同时还要在 webpack.config.js 中配置这些变量，使得 webpack 能够识别他们。</p>
 <pre><code>// webpack.config.js
 
 // definePlugin 会把定义的string 变量插入到Js代码中。
@@ -456,16 +390,10 @@ module.exports = {
   },
   plugins: [definePlugin]
 };
-</code></pre>
-
-<p>配置完成后，就可以使用  BUILD_DEV=1 BUILD_PRERELEASE=1 webpack 来打包代码了。 值得注意的是，webpack -p  会删除所有无作用代码，也就是说那些包裹在这些全局变量下的代码块都会被删除，这样就能保证这些代码不会因发布上线而泄露。</p>
-
+</code></pre><p>配置完成后，就可以使用  BUILD_DEV=1 BUILD_PRERELEASE=1 webpack 来打包代码了。 值得注意的是，webpack -p  会删除所有无作用代码，也就是说那些包裹在这些全局变量下的代码块都会被删除，这样就能保证这些代码不会因发布上线而泄露。</p>
 <h5 id="异步加载">异步加载</h5>
-
 <p>虽然 CommonJS 是同步加载的，但是 webpack 也提供了异步加载的方式。这对于单页应用中使用的客户端路由非常有用。当真正路由到了某个页面的时候，它的代码才会被加载下来。</p>
-
 <p>指定你要异步加载的   拆分点。看下面的例子</p>
-
 <pre><code>if (window.location.pathname === '/feed') {
   showLoadingState();
   require.ensure([], function() { // 这个语法痕奇怪，但是还是可以起作用的
@@ -479,29 +407,17 @@ module.exports = {
     require('./profile').show();
   });
 }
-</code></pre>
-
-<p>剩下的事就可以交给 webpack，它会为你生成并加载这些额外的  chunk  文件。</p>
-
+</code></pre><p>剩下的事就可以交给 webpack，它会为你生成并加载这些额外的  chunk  文件。</p>
 <h5 id="简化执行代码">简化执行代码</h5>
-
 <p>我们可以在 package.json 中事先定义好命令：</p>
-
-<pre><code class="language-javascript">&quot;scripts&quot;: {    
-  &quot;dev&quot;: &quot;BUILD_DEV=1 webpack-dev-server --progress --colors&quot;,    
-  &quot;build&quot;: &quot;BUILD_PRERELEASE=1 webpack -p&quot;  }
-</code></pre>
-
-<p>那么就可以避免输入冗长的命令了</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">&#34;scripts&#34;</span><span style="color:#f92672">:</span> {    
+  <span style="color:#e6db74">&#34;dev&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;BUILD_DEV=1 webpack-dev-server --progress --colors&#34;</span>,    
+  <span style="color:#e6db74">&#34;build&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;BUILD_PRERELEASE=1 webpack -p&#34;</span>  }
+</code></pre></div><p>那么就可以避免输入冗长的命令了</p>
 <p>开发时输入 <code>npm run dev</code></p>
-
 <p>发布时输入 <code>npm run build</code></p>
-
 <h5 id="合并优化公共代码">合并优化公共代码</h5>
-
 <p>项目中，对于一些常用的组件，站点公用模块经常需要与其他逻辑分开，然后合并到同一个文件，以便于长时间的缓存。要实现这一功能，配置参照:</p>
-
 <pre><code>var webpack            = require('webpack');
 
 var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
@@ -528,14 +444,9 @@ plugins: [
    new CommonsChunkPlugin('common.js', ['part1', 'c'])
 
 ]
-</code></pre>
-
-<p>简单的情况下可以这样写  newwebpack.optimize.CommonsChunkPlugin(&lsquo;common.js’);，这样就会提取所有模块的通用代码到 common.js。</p>
-
+</code></pre><p>简单的情况下可以这样写  newwebpack.optimize.CommonsChunkPlugin(&lsquo;common.js’);，这样就会提取所有模块的通用代码到 common.js。</p>
 <h5 id="devtool-调试">devtool 调试</h5>
-
 <p>可以通过在配置中加入 devtool 项，选择预设调试工具来提高代码调试质量和效率：</p>
-
 <ul>
 <li>eval – 每个模块采用 eval 和  //@ sourceURL  来执行</li>
 <li>source-map – sourceMap 是发散的，和 output.sourceMapFilename 协调使用</li>
@@ -545,7 +456,6 @@ plugins: [
 <li>cheap-source-map – 去除 column-mappings 的 SourceMap， 来自于 loader 中的内容不会被使用。</li>
 <li>cheap-module-source-map – 去除 column-mappings 的 SourceMap, 来自于 loader 中的 SourceMaps 被简化为单个 mapping 文件</li>
 </ul>
-
 <table>
 <thead>
 <tr>
@@ -556,7 +466,6 @@ plugins: [
 <th><strong>质量</strong></th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>eval</td>
@@ -565,7 +474,6 @@ plugins: [
 <td>no</td>
 <td>生成代码</td>
 </tr>
-
 <tr>
 <td>cheap-eval-source-map</td>
 <td>+</td>
@@ -573,7 +481,6 @@ plugins: [
 <td>no</td>
 <td>转换代码(lines only)</td>
 </tr>
-
 <tr>
 <td>cheap-source-map</td>
 <td>+</td>
@@ -581,7 +488,6 @@ plugins: [
 <td>yes</td>
 <td>转换代码(lines only)</td>
 </tr>
-
 <tr>
 <td>cheap-module-eval-source-map</td>
 <td>o</td>
@@ -589,7 +495,6 @@ plugins: [
 <td>no</td>
 <td>源代码 (lines only)</td>
 </tr>
-
 <tr>
 <td>cheap-module-source-map</td>
 <td>o</td>
@@ -597,7 +502,6 @@ plugins: [
 <td>yes</td>
 <td>源代码(lines only)</td>
 </tr>
-
 <tr>
 <td>eval-source-map</td>
 <td>—</td>
@@ -605,7 +509,6 @@ plugins: [
 <td>no</td>
 <td>源代码</td>
 </tr>
-
 <tr>
 <td>source-map</td>
 <td>—</td>
@@ -615,12 +518,9 @@ plugins: [
 </tr>
 </tbody>
 </table>
-
 <h5 id="loader">loader</h5>
-
 <p><strong>来自官方文档:</strong>
 “Loaders allow you to preprocess files as you require() or “load” them. Loaders are kind of like “tasks” are in other build tools, and provide a powerful way to handle frontend build steps. Loaders can transform files from a different language like CoffeeScript to JavaScript, or inline images as data URLs. Loaders even allow you to do things like require() css files right in your JavaScript!”</p>
-
 <pre><code>module.exports = {
 
 entry: [&quot;./global.js&quot; , &quot;./app.js&quot;],
@@ -649,20 +549,15 @@ resolve: {
 	extensions: ['', '.js', '.es6']
 },
 }
-</code></pre>
-
-<p>我们的第一个 loader 添加了 3 个键，下面分别做下解释。</p>
-
+</code></pre><p>我们的第一个 loader 添加了 3 个键，下面分别做下解释。</p>
 <ol>
 <li><strong>test</strong> —  一个正则表达式，测试什么样的文件类型可以通过 loader 去执行。上面的例子意思是仅后缀为.es6 的文件通过。</li>
 <li><strong>exclude</strong> —  表示 loader 应该忽略／不包含的文件／文件路径。例如 node_modules 文件夹.</li>
 <li><strong>loader</strong> —表示我们正在使用的 loader 名称 (babel-loader).</li>
 <li><strong>query</strong> —  你可以传递一些选项参数到 loader，写法类似一个  <a href="https://github.com/webpack/loader-utils">query string</a> 或者像上面的例子那样使用 query 属性。</li>
-<li><strong>presets </strong>—让我们能够使用早先安装好的 react 和 es2015 的 presets。</li>
+<li>**presets **—让我们能够使用早先安装好的 react 和 es2015 的 presets。</li>
 </ol>
-
 <h4 id="another-config-example">another config example</h4>
-
 <pre><code>var webpack            = require('webpack');
 
 var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
@@ -860,14 +755,9 @@ module.exports = {
     }
 
 };
-</code></pre>
-
-<h3 id="总结">总结</h3>
-
+</code></pre><h3 id="总结">总结</h3>
 <p>工欲善其事，必先利其器。</p>
-
 <h3 id="参考资料">参考资料</h3>
-
 <ol>
 <li><a href="http://www.h-simon.com/42/">webpack 常用配置总结</a></li>
 <li><a href="http://segmentfault.com/a/1190000002551952">Webpack</a> <a href="http://segmentfault.com/a/1190000002551952">入门指迷</a></li>

@@ -6,10 +6,19 @@
     <description>Recent content in firmware on 王铁手的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 06 Nov 2019 10:37:13 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 01 Mar 2020 12:46:13 +0800</lastBuildDate>
     
 	<atom:link href="//wtser.com/tags/firmware/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>极路由 4 MAC 变 0 恢复</title>
+      <link>//wtser.com/posts/recover-gee4-mac/</link>
+      <pubDate>Sun, 01 Mar 2020 12:46:13 +0800</pubDate>
+      
+      <guid>//wtser.com/posts/recover-gee4-mac/</guid>
+      <description>奇怪的现象 不知道什么时候起， 总会分配一堆 ipv6 地址，让人诧异抓狂。 后来发现路由器的 wifi BSSID总是会变，估计与此有关。刷回官方估计，发现 mac 地址后6位变成0了，典型的半砖状态。 失败经验总结 在 breed 下 刷 eeprom 无效 在 breed</description>
+    </item>
     
     <item>
       <title>使用 TTL 和 TFTP 恢复 ubnt erx 官方固件</title>

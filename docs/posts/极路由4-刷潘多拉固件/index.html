@@ -122,79 +122,56 @@
           <h2><a href='/posts/%E6%9E%81%E8%B7%AF%E7%94%B14-%E5%88%B7%E6%BD%98%E5%A4%9A%E6%8B%89%E5%9B%BA%E4%BB%B6/'>极路由4 刷潘多拉固件</a></h2>
           <span class="date">2017.11.19</span>
         </div>
-        <div class="post_content markdown">
-
-<p>B70 ，MT7621</p>
-
+        <div class="post_content markdown"><p>B70 ，MT7621</p>
 <h2 id="准备工作">准备工作</h2>
-
 <ol>
 <li>下载固件包</li>
 </ol>
-
-<p>链接：<a href="https://eyun.baidu.com/s/3i5IBidR">https://eyun.baidu.com/s/3i5IBidR</a> 密码：68bp</p>
-
-<ol>
+<p>链接：https://eyun.baidu.com/s/3i5IBidR 密码：68bp</p>
+<ol start="2">
 <li>开启极路由的开发者模式（也就是 root）</li>
 </ol>
-
 <h2 id="fbi-warning">FBI Warning</h2>
-
 <ol>
 <li>固件保留了极 4 的分区信息, 不破坏原机信，建议刷机前备份 firmware 分区，这样可以在 pb-boot 下面恢复原厂固件。</li>
 <li>开通开发者模式会失去官方保修，且不可恢复.</li>
 </ol>
-
 <h2 id="刷入步骤">刷入步骤</h2>
-
 <ol>
-<li>备份官方固件</li>
-</ol>
-
+<li>
+<p>备份官方固件</p>
 <p>dd if=/dev/mtd9 of=/tmp/firmware_backup.bin</p>
-
-<ol>
-<li>写入潘多拉</li>
+</li>
+<li>
+<p>写入潘多拉</p>
+</li>
 </ol>
-
 <p>将固件和 pb-boot 上传到路由/tmp 目录下，使用如下命令刷入</p>
-
 <pre><code>  mtd write /tmp/PandoraBox-ralink-mt7621-hc5962-2017-03-17-git-3840fad-squashfs-sysupgrade.bin firmware
 
   mtd erase firmware_backup
 </code></pre>
-
 <p>ps：如果不擦 backup,重启后会恢复回去</p>
-
-<ol>
-<li>刷 pb-boot （万一挂了可以用它刷回官方固件）</li>
-</ol>
-
+<ol start="3">
+<li>
+<p>刷 pb-boot （万一挂了可以用它刷回官方固件）</p>
 <p>mtd write /tmp/pb-boot-hc5962.bin u-boot</p>
-
+</li>
+</ol>
 <h2 id="其他">其他</h2>
-
 <ol>
 <li>SS</li>
 </ol>
-
 <p>我试着安装了 ss，好像存在一些问题，甚至导致了网络循环断开又链接，重启路由才恢复。</p>
-
-<ol>
+<ol start="2">
 <li>LEDE</li>
 </ol>
-
 <p>现在也能刷 LEDE 了。</p>
-
 <h2 id="参考资料">参考资料</h2>
-
 <p><a href="http://www.right.com.cn/FORUM/thread-209767-1-1.html">http://www.right.com.cn/FORUM/thread-209767-1-1.html</a></p>
-
 <p><a href="https://downloads.lede-project.org/snapshots/targets/ramips/mt7621/">https://downloads.lede-project.org/snapshots/targets/ramips/mt7621/</a></p>
-
 <p><a href="https://github.com/lede-project/source/pull/865">https://github.com/lede-project/source/pull/865</a></p>
-
-<p><img src="https://static.notion-static.com/77cb5ccaf034435cbc6a967b0e4709e0/Untitled" alt="" /></p>
+<p><img src="https://static.notion-static.com/77cb5ccaf034435cbc6a967b0e4709e0/Untitled" alt=""></p>
 </div>
         <div class="post_footer">
           

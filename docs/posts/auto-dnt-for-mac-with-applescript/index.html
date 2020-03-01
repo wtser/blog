@@ -122,34 +122,27 @@
           <h2><a href='/posts/auto-dnt-for-mac-with-applescript/'>Mac 勿扰模式周期性开关闭功能实现脚本</a></h2>
           <span class="date">2017.10.30</span>
         </div>
-        <div class="post_content markdown"><p><img src="https://image-static.segmentfault.com/992/660/992660630-59f6de4fba1ae" alt="" /></p>
-
+        <div class="post_content markdown"><p><img src="https://image-static.segmentfault.com/992/660/992660630-59f6de4fba1ae" alt=""></p>
 <p>专心开发工作的时候，通知滴滴答答响个不停，影响效率和心情? 。</p>
-
 <p>发现 Mac 提供了临时屏蔽通知的功能，就是勿扰模式。</p>
-
 <p>不错，可以安心工作了。缺点就是容易忘记关闭勿扰，错过一些重要的通知。
 可是每次手动开启关闭又显得麻烦。如果我正在使用番茄钟工作，想要 25 分钟勿扰 5 分钟尽管扰呢？</p>
-
 <p>AppleScript！这货系统自带的，好用，几行脚本就轻松实现了。</p>
-
 <p>前提：在系统快捷键中 将打开关闭勿扰模式的快捷键设置为 cmd+shift+option+control+d</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-applescript" data-lang="applescript"><span style="color:#66d9ef">repeat</span> <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">true</span>
+	<span style="color:#66d9ef">ignoring </span>application responses
+		<span style="color:#66d9ef">tell</span> application <span style="color:#e6db74">&#34;System Events&#34;</span> <span style="color:#66d9ef">to</span> keystroke <span style="color:#e6db74">&#34;D&#34;</span> using {command down, shift down, option down, control down}
+	<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">ignoring</span>
+	say <span style="color:#e6db74">&#34;DND opened&#34;</span>
+	delay <span style="color:#ae81ff">1500</span>
 
-<pre><code class="language-applescript">repeat while true
-	ignoring application responses
-		tell application &quot;System Events&quot; to keystroke &quot;D&quot; using {command down, shift down, option down, control down}
-	end ignoring
-	say &quot;DND opened&quot;
-	delay 1500
-
-	ignoring application responses
-		tell application &quot;System Events&quot; to keystroke &quot;D&quot; using {command down, shift down, option down, control down}
-	end ignoring
-	say &quot;DND closed&quot;
-	delay 300
-end repeat
-</code></pre>
-</div>
+	<span style="color:#66d9ef">ignoring </span>application responses
+		<span style="color:#66d9ef">tell</span> application <span style="color:#e6db74">&#34;System Events&#34;</span> <span style="color:#66d9ef">to</span> keystroke <span style="color:#e6db74">&#34;D&#34;</span> using {command down, shift down, option down, control down}
+	<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">ignoring</span>
+	say <span style="color:#e6db74">&#34;DND closed&#34;</span>
+	delay <span style="color:#ae81ff">300</span>
+<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">repeat</span>
+</code></pre></div></div>
         <div class="post_footer">
           
           <div class="meta">

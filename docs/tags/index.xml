@@ -6,10 +6,37 @@
     <description>Recent content in Tags on 王铁手的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 06 Nov 2019 10:37:13 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 01 Mar 2020 12:46:13 +0800</lastBuildDate>
     
 	<atom:link href="//wtser.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>firmware</title>
+      <link>//wtser.com/tags/firmware/</link>
+      <pubDate>Sun, 01 Mar 2020 12:46:13 +0800</pubDate>
+      
+      <guid>//wtser.com/tags/firmware/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hiwifi</title>
+      <link>//wtser.com/tags/hiwifi/</link>
+      <pubDate>Sun, 01 Mar 2020 12:46:13 +0800</pubDate>
+      
+      <guid>//wtser.com/tags/hiwifi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>trial</title>
+      <link>//wtser.com/tags/trial/</link>
+      <pubDate>Sun, 01 Mar 2020 12:46:13 +0800</pubDate>
+      
+      <guid>//wtser.com/tags/trial/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>erx</title>
@@ -21,29 +48,11 @@
     </item>
     
     <item>
-      <title>firmware</title>
-      <link>//wtser.com/tags/firmware/</link>
-      <pubDate>Wed, 06 Nov 2019 10:37:13 +0800</pubDate>
-      
-      <guid>//wtser.com/tags/firmware/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>tftp</title>
       <link>//wtser.com/tags/tftp/</link>
       <pubDate>Wed, 06 Nov 2019 10:37:13 +0800</pubDate>
       
       <guid>//wtser.com/tags/tftp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>trial</title>
-      <link>//wtser.com/tags/trial/</link>
-      <pubDate>Wed, 06 Nov 2019 10:37:13 +0800</pubDate>
-      
-      <guid>//wtser.com/tags/trial/</guid>
       <description></description>
     </item>
     
@@ -215,15 +224,6 @@
       <pubDate>Sun, 03 Dec 2017 10:00:00 +0800</pubDate>
       
       <guid>//wtser.com/tags/plex/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hiwifi</title>
-      <link>//wtser.com/tags/hiwifi/</link>
-      <pubDate>Sun, 19 Nov 2017 10:57:48 +0800</pubDate>
-      
-      <guid>//wtser.com/tags/hiwifi/</guid>
       <description></description>
     </item>
     

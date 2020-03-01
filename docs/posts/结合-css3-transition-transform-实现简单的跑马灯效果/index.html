@@ -122,16 +122,10 @@
           <h2><a href='/posts/%E7%BB%93%E5%90%88-css3-transition-transform-%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%9A%84%E8%B7%91%E9%A9%AC%E7%81%AF%E6%95%88%E6%9E%9C/'>结合 CSS3 transition transform 实现简单的跑马灯效果</a></h2>
           <span class="date">2018.02.06</span>
         </div>
-        <div class="post_content markdown">
-
-<p>这是之前客户的一个需求，给的 demo 是用 gif 实现跑马灯，但是我们的没法用 gif，因为图上的文字需要翻译成各国语言，所以不能使用图片来实现，那么，自己写一个咯。</p>
-
+        <div class="post_content markdown"><p>这是之前客户的一个需求，给的 demo 是用 gif 实现跑马灯，但是我们的没法用 gif，因为图上的文字需要翻译成各国语言，所以不能使用图片来实现，那么，自己写一个咯。</p>
 <h2 id="思考过程">思考过程</h2>
-
-<p><img src="https://image-static.segmentfault.com/229/355/2293555127-5a7d1130d6296_articlex" alt="思考过程" /></p>
-
+<p><img src="https://image-static.segmentfault.com/229/355/2293555127-5a7d1130d6296_articlex" alt="思考过程"></p>
 <h2 id="html">html</h2>
-
 <pre><code>&lt;div lantern&gt;
   &lt;ul&gt;
     &lt;li&gt;1&lt;/li&gt;
@@ -140,72 +134,61 @@
     &lt;li&gt;4&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;
-</code></pre>
-
-<h2 id="css">css</h2>
-
-<pre><code class="language-css">* {
-  margin: 0;
-  padding: 0;
+</code></pre><h2 id="css">css</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">*</span> {
+  <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>;
+  <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span>;
 }
 
-[lantern] {
-  overflow: hidden;
+<span style="color:#f92672">[</span><span style="color:#f92672">lantern</span><span style="color:#f92672">]</span> {
+  <span style="color:#66d9ef">overflow</span>: <span style="color:#66d9ef">hidden</span>;
 }
 
-ul {
-  white-space: nowrap;
-  font-size: 0;
-  transform: translateX(0);
-  transition: transform 0s linear;
+<span style="color:#f92672">ul</span> {
+  <span style="color:#66d9ef">white-space</span>: <span style="color:#66d9ef">nowrap</span>;
+  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">0</span>;
+  <span style="color:#66d9ef">transform</span>: translateX(<span style="color:#ae81ff">0</span>);
+  <span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">transform</span> <span style="color:#ae81ff">0</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">linear</span>;
 }
 
-li {
-  width: 50vw;
-  border: 1px solid red;
-  display: inline-block;
-  height: 30px;
-  font-size: 16px;
+<span style="color:#f92672">li</span> {
+  <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">50</span><span style="color:#66d9ef">vw</span>;
+  <span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#66d9ef">red</span>;
+  <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">inline</span><span style="color:#f92672">-</span><span style="color:#66d9ef">block</span>;
+  <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">30</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">16</span><span style="color:#66d9ef">px</span>;
 }
-</code></pre>
+</code></pre></div><h2 id="js">js</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">lantern</span>(<span style="color:#a6e22e">$element</span>, <span style="color:#a6e22e">speed</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>) {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">liWidth</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">$ul</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$element</span>.<span style="color:#a6e22e">find</span>(<span style="color:#e6db74">&#34;ul&#34;</span>);
 
-<h2 id="js">js</h2>
+  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">run</span>(<span style="color:#a6e22e">init</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>) {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">$li</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$ul</span>.<span style="color:#a6e22e">find</span>(<span style="color:#e6db74">&#34;li&#34;</span>).<span style="color:#a6e22e">first</span>();
+    <span style="color:#a6e22e">liWidth</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$li</span>.<span style="color:#a6e22e">outerWidth</span>();
 
-<pre><code class="language-js">function lantern($element, speed = 10) {
-  let liWidth = 0;
-  let $ul = $element.find(&quot;ul&quot;);
-
-  function run(init = false) {
-    let $li = $ul.find(&quot;li&quot;).first();
-    liWidth = $li.outerWidth();
-
-    if (!init) {
-      $ul.append($li[0].outerHTML);
-      $li.remove();
+    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">init</span>) {
+      <span style="color:#a6e22e">$ul</span>.<span style="color:#a6e22e">append</span>(<span style="color:#a6e22e">$li</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">outerHTML</span>);
+      <span style="color:#a6e22e">$li</span>.<span style="color:#a6e22e">remove</span>();
     }
 
-    $ul[0].style.transitionDuration = &quot;0s&quot;;
-    $ul[0].style.transform = &quot;translateX(0)&quot;;
+    <span style="color:#a6e22e">$ul</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">transitionDuration</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;0s&#34;</span>;
+    <span style="color:#a6e22e">$ul</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">transform</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;translateX(0)&#34;</span>;
 
-    setTimeout(function() {
-      $ul[0].style.transitionDuration = speed + &quot;s&quot;;
-      $ul[0].style.transform = &quot;translateX(-&quot; + liWidth + &quot;px)&quot;;
-    }, 20);
+    <span style="color:#a6e22e">setTimeout</span>(<span style="color:#66d9ef">function</span>() {
+      <span style="color:#a6e22e">$ul</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">transitionDuration</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">speed</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;s&#34;</span>;
+      <span style="color:#a6e22e">$ul</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">transform</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;translateX(-&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">liWidth</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;px)&#34;</span>;
+    }, <span style="color:#ae81ff">20</span>);
   }
 
-  run(true);
-  setTimeout(() =&gt; {
-    setInterval(run, speed * 1000);
-  }, 0);
+  <span style="color:#a6e22e">run</span>(<span style="color:#66d9ef">true</span>);
+  <span style="color:#a6e22e">setTimeout</span>(() =&gt; {
+    <span style="color:#a6e22e">setInterval</span>(<span style="color:#a6e22e">run</span>, <span style="color:#a6e22e">speed</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>);
+  }, <span style="color:#ae81ff">0</span>);
 }
 
-lantern($(&quot;[lantern]&quot;), 20);
-</code></pre>
-
-<iframe height="265" style="width: 100%;" scrolling="no" title="结合 CSS3 transition transform 实现简单的跑马灯效果" src="//codepen.io/wtser/embed/GyNzBK/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/wtser/pen/GyNzBK/'>结合 CSS3 transition transform 实现简单的跑马灯效果</a> by 王铁手
-  (<a href='https://codepen.io/wtser'>@wtser</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<span style="color:#a6e22e">lantern</span>(<span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;[lantern]&#34;</span>), <span style="color:#ae81ff">20</span>);
+</code></pre></div><!-- raw HTML omitted -->
 </div>
         <div class="post_footer">
           
