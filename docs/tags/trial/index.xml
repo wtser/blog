@@ -6,10 +6,19 @@
     <description>Recent content in trial on 王铁手的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 01 Mar 2020 12:46:13 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 05 Mar 2020 10:24:13 +0800</lastBuildDate>
     
 	<atom:link href="//wtser.com/tags/trial/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>DIY iMac 黑苹果</title>
+      <link>//wtser.com/posts/imac-diy/</link>
+      <pubDate>Thu, 05 Mar 2020 10:24:13 +0800</pubDate>
+      
+      <guid>//wtser.com/posts/imac-diy/</guid>
+      <description>这是一个创建于 2018 年 4 月 7 日的 plan，终于落实了。 需求 更快的 cpu，更大的内存容量，爽就完了 双系统 偶尔进 widnow 打打游戏 方便家人使用 window 办公 视频教程 https://www.youtube.com/watch?v=1BFpDa626Kk https://www.youtube.com/watch?v=Ly-HGwqHJdM 选购指南 https://www.tonymacx86.com/buyersguide/april/2018/ https://www.itpwd.com/ 组装 ITX 黑苹果主机 - kok 的笔记本 动手装一台 iMac - “</description>
+    </item>
     
     <item>
       <title>极路由 4 MAC 变 0 恢复</title>
