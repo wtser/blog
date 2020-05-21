@@ -34,7 +34,7 @@ googleAnalytics = ""                 # your google analytics id
   identifier = "project"
   url = "/tags/project"
 [[menu.main]]
-  name = "试验"
+  name = "折腾"
   weight = 20
   identifier = "trial"
   url = "/tags/trial"
